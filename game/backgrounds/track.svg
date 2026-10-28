@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="r" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="2" seed="102" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#f6f2e9"/>
+  <rect width="1600" height="600" fill="#f4e7d5"/>
+  <circle cx="1210" cy="230" r="94" fill="#f5d7ac" opacity=".8"/>
+  <path d="M0 600 C300 566 560 592 800 572 C1080 548 1340 574 1600 550 L1600 1000 L0 1000 Z" fill="#e9dfcc"/>
+  <g filter="url(#r)" stroke="#4a423b" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- clouds -->
+    <g fill="none" stroke="#cbb69e" stroke-width="2.4" opacity=".8">
+      <path d="M180 200 q24 -30 58 -14 q20 -26 52 -8 q28 -6 34 18 q-28 10 -60 6 q-38 8 -84 -2 Z"/>
+      <path d="M560 150 q20 -24 48 -12 q18 -22 44 -6 q24 -4 28 16 q-22 8 -50 4 q-32 6 -70 -2 Z"/>
+      <path d="M900 180 q18 -20 40 -10 q14 -18 36 -4 q20 -2 22 14 q-20 8 -42 4 q-28 6 -56 -4 Z"/>
+    </g>
+    <g fill="none" stroke="#a9957d" stroke-width="2.2">
+      <path d="M760 240 q8 -8 16 0 q8 8 16 0 M810 218 q6 -6 12 0 q6 6 12 0"/>
+      <path d="M340 270 q7 -7 14 0 q7 7 14 0"/>
+    </g>
+
+    <!-- distant school building -->
+    <g>
+      <path d="M80 520 L380 508 L392 600 L88 612 Z" fill="#f5ebda" stroke-width="2.8"/>
+      <path d="M100 470 L360 460 L376 510 L92 520 Z" fill="#e8d8be" stroke-width="2.8"/>
+      <g fill="#d6e3e7" stroke-width="2.2">
+        <rect x="120" y="530" width="42" height="40"/><rect x="182" y="528" width="42" height="40"/>
+        <rect x="244" y="526" width="42" height="40"/><rect x="306" y="524" width="42" height="40"/>
+      </g>
+      <path d="M232 612 V550 C232 534 260 534 260 550 V612" fill="#e8ded0" stroke-width="2.6"/>
+      <path d="M220 460 V430 L246 424 V456" fill="#e8d8be" stroke-width="2.4"/>
+    </g>
+
+    <!-- floodlight poles -->
+    <g>
+      <path d="M170 640 C168 520 168 400 174 300" fill="none" stroke-width="5"/>
+      <path d="M708 630 C706 520 706 410 712 320" fill="none" stroke-width="5"/>
+      <path d="M1310 640 C1308 520 1308 410 1314 316" fill="none" stroke-width="5"/>
+      <g fill="#f4e5c4" stroke-width="3">
+        <path d="M140 300 L208 300 L218 330 L130 330 Z"/>
+        <path d="M678 320 L746 320 L756 350 L668 350 Z"/>
+        <path d="M1280 316 L1348 316 L1358 346 L1270 346 Z"/>
+      </g>
+      <path d="M174 330 C160 360 158 392 164 420 M712 350 C698 380 696 412 702 440 M1314 346 C1300 376 1298 408 1304 436" fill="none" stroke="#d8c8a8" stroke-width="2.2" opacity=".8"/>
+      <ellipse cx="174" cy="372" rx="70" ry="34" fill="#f8ecc7" opacity=".35"/>
+      <ellipse cx="712" cy="392" rx="70" ry="34" fill="#f8ecc7" opacity=".32"/>
+      <ellipse cx="1314" cy="388" rx="70" ry="34" fill="#f8ecc7" opacity=".35"/>
+    </g>
+
+    <!-- fence -->
+    <g>
+      <path d="M0 600 L1600 570" fill="none" stroke="#9b8b74" stroke-width="3.4"/>
+      <path d="M0 562 L1600 532" fill="none" stroke="#9b8b74" stroke-width="2.8"/>
+      <g stroke="#9b8b74" stroke-width="2.6">
+        <path d="M40 566 V620 M100 564 V618 M160 562 V616 M220 560 V614 M280 558 V612 M340 556 V610 M400 554 V608 M460 552 V606 M520 550 V604 M580 548 V602 M640 546 V600 M700 544 V598 M760 542 V596 M820 540 V594 M880 538 V592 M940 536 V590 M1000 534 V588 M1060 532 V586 M1120 530 V584 M1180 528 V582 M1240 526 V580 M1300 524 V578 M1360 522 V576 M1420 520 V574 M1480 518 V572 M1540 516 V570"/>
+      </g>
+    </g>
+
+    <!-- bleachers -->
+    <g>
+      <path d="M1040 604 L1420 592 L1434 700 L1052 714 Z" fill="#f2e6d3" stroke-width="3.2"/>
+      <path d="M1060 632 L1418 622 M1066 660 L1422 650 M1072 688 L1426 678" fill="none" stroke="#cfbda0" stroke-width="2.6"/>
+      <path d="M1060 714 L1060 790 M1424 700 L1424 776" fill="none" stroke-width="4.4"/>
+      <path d="M1070 780 C1180 768 1310 764 1414 774" fill="none" stroke="#d6c4a8" stroke-width="2.4"/>
+    </g>
+
+    <!-- track oval -->
+    <g fill="none" stroke="#c7a58a" stroke-width="3.2">
+      <path d="M0 800 C300 740 560 744 800 760 C1080 778 1340 760 1600 720"/>
+      <path d="M0 876 C300 812 560 818 800 834 C1080 852 1340 832 1600 788"/>
+      <path d="M0 952 C300 884 560 892 800 908 C1080 926 1340 904 1600 858"/>
+      <path d="M80 890 C340 828 560 832 800 848 C1060 864 1280 844 1520 800" stroke="#d8bfa8" stroke-width="2.2" stroke-dasharray="14 16"/>
+    </g>
+
+    <!-- starting blocks and cones -->
+    <g>
+      <path d="M300 828 L360 820 L368 840 L308 848 Z" fill="#e5d9c5" stroke-width="2.8"/>
+      <path d="M310 848 L310 870 M354 842 L354 864" fill="none" stroke-width="3"/>
+      <path d="M1220 842 C1228 822 1252 822 1258 842 L1252 872 L1226 872 Z" fill="#e8b4a0" stroke-width="2.8"/>
+      <path d="M1230 846 L1254 846" stroke-width="2.4"/>
+      <path d="M560 880 C566 864 586 864 592 880 L588 902 L564 902 Z" fill="#e8b4a0" stroke-width="2.6"/>
+    </g>
+
+    <!-- grass scribbles -->
+    <g fill="none" stroke="#b3c1a8" stroke-width="2.2" opacity=".8">
+      <path d="M120 980 q6 -16 12 -2 q6 -14 12 0"/>
+      <path d="M460 990 q6 -16 12 -2 q6 -14 12 0"/>
+      <path d="M980 976 q6 -16 12 -2 q6 -14 12 0"/>
+      <path d="M1400 984 q6 -16 12 -2 q6 -14 12 0"/>
+    </g>
+
+    <!-- floating doodles -->
+    <g fill="none" stroke="#d6a89b" stroke-width="2.2" opacity=".75">
+      <path d="M880 400 c-6 -8 -18 -3 -16 6 c1 7 16 15 16 15 s15 -8 16 -15 c2 -9 -10 -14 -16 -6 Z"/>
+      <path d="M1080 340 l3 7 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+    </g>
+  </g>
+</svg>

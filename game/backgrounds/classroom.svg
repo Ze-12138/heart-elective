@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="r" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="2" seed="12" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#faf6ee"/>
+  <rect y="0" width="1600" height="690" fill="#f6efe2"/>
+  <rect y="690" width="1600" height="310" fill="#efe6d5"/>
+  <ellipse cx="800" cy="360" rx="620" ry="300" fill="#fffaf0" opacity=".55"/>
+  <g filter="url(#r)" stroke="#4a423b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- windows -->
+    <g>
+      <rect x="60" y="160" width="300" height="420" rx="8" fill="#fdf9f0"/>
+      <rect x="82" y="182" width="256" height="376" fill="#dbe9ef"/>
+      <path d="M210 182 V558 M82 370 H338" stroke-width="5"/>
+      <path d="M96 210 C130 250 134 320 124 380" fill="none" stroke="#bfd6e0" stroke-width="2.6"/>
+      <path d="M250 220 C286 268 292 350 278 430" fill="none" stroke="#bfd6e0" stroke-width="2.6"/>
+      <path d="M60 160 C50 240 48 400 62 470 L74 470 C68 380 70 240 78 174 Z" fill="#f9f2e6"/>
+      <path d="M360 160 C372 240 372 400 358 470 L346 470 C352 380 350 240 342 174 Z" fill="#f9f2e6"/>
+      <path d="M92 206 L112 206 M126 250 L146 250 M100 300 L120 300" stroke="#c4d9e2" stroke-width="2.4" opacity=".8"/>
+    </g>
+    <g transform="translate(1240 0)">
+      <rect x="0" y="160" width="300" height="420" rx="8" fill="#fdf9f0"/>
+      <rect x="22" y="182" width="256" height="376" fill="#dbe9ef"/>
+      <path d="M150 182 V558 M22 370 H278" stroke-width="5"/>
+      <path d="M36 212 C70 254 74 324 62 384" fill="none" stroke="#bfd6e0" stroke-width="2.6"/>
+      <path d="M190 220 C226 268 232 350 218 430" fill="none" stroke="#bfd6e0" stroke-width="2.6"/>
+      <path d="M0 160 C-10 240 -12 400 2 470 L14 470 C8 380 10 240 18 174 Z" fill="#f9f2e6"/>
+      <path d="M300 160 C312 240 312 400 298 470 L286 470 C292 380 290 240 282 174 Z" fill="#f9f2e6"/>
+    </g>
+
+    <!-- blackboard -->
+    <rect x="380" y="148" width="840" height="420" rx="6" fill="#e3ece2" stroke-width="5"/>
+    <rect x="402" y="170" width="796" height="376" rx="3" fill="#dfe9e0"/>
+    <rect x="356" y="556" width="888" height="20" rx="5" fill="#e9dcc4"/>
+    <path d="M388 586 C470 590 540 586 610 590" fill="none" stroke="#d8c9ae" stroke-width="3"/>
+    <circle cx="1190" cy="194" r="12" fill="#f4e6c9"/>
+
+    <!-- chalk doodles -->
+    <g fill="none" stroke="#fbfaf2" stroke-width="3.4" stroke-linecap="round" opacity=".95">
+      <path d="M470 430 C560 430 650 430 730 430"/>
+      <path d="M500 438 V262"/>
+      <path d="M500 438 C566 404 620 320 730 290"/>
+      <path d="M580 438 C628 414 668 360 744 340" stroke-width="2.4" opacity=".7"/>
+      <path d="M452 456 C492 440 540 440 578 456 C540 472 492 472 452 456 Z" stroke-width="2.6"/>
+      <path d="M812 226 C832 214 858 214 876 228 M824 244 C842 236 860 236 872 246" stroke-width="2.8"/>
+      <path d="M930 300 L988 300 M958 272 L958 328"/>
+      <path d="M1010 350 C1042 330 1082 332 1110 354 C1082 376 1042 376 1010 354 Z" stroke-width="2.6"/>
+      <path d="M1060 236 L1073 262 L1102 266 L1080 286 L1086 315 L1060 300 L1034 315 L1040 286 L1018 266 L1047 262 Z" stroke-width="2.2" opacity=".8"/>
+      <path d="M784 470 C810 452 846 452 872 470" stroke-width="2.4" opacity=".65"/>
+      <path d="M1130 470 C1144 456 1160 456 1172 470 C1160 484 1144 484 1130 470 Z" stroke-width="2.2" opacity=".6"/>
+    </g>
+    <g fill="#fbfaf2" opacity=".6">
+      <circle cx="770" cy="250" r="3"/><circle cx="800" cy="280" r="2.2"/>
+      <circle cx="900" cy="420" r="2.6"/><circle cx="980" cy="460" r="2"/>
+    </g>
+
+    <!-- clock -->
+    <circle cx="800" cy="96" r="27" fill="#fdf9f0" stroke-width="4"/>
+    <path d="M800 80 V96 L812 104" fill="none" stroke-width="3"/>
+    <path d="M800 60 V48 M800 144 V132 M764 96 H752 M848 96 H836" fill="none" stroke-width="3"/>
+
+    <!-- lamps -->
+    <g>
+      <path d="M390 0 V76 M800 0 V64 M1210 0 V76" fill="none" stroke-width="3.4"/>
+      <path d="M356 78 L424 78 L446 122 L334 122 Z" fill="#f2e6cf"/>
+      <path d="M766 66 L834 66 L856 110 L744 110 Z" fill="#f2e6cf"/>
+      <path d="M1176 78 L1244 78 L1266 122 L1154 122 Z" fill="#f2e6cf"/>
+      <ellipse cx="390" cy="152" rx="64" ry="22" fill="#f8e9bd" opacity=".65"/>
+      <ellipse cx="800" cy="140" rx="64" ry="22" fill="#f8e9bd" opacity=".65"/>
+      <ellipse cx="1210" cy="152" rx="64" ry="22" fill="#f8e9bd" opacity=".65"/>
+      <path d="M362 122 H418 M772 110 H828 M1182 122 H1238" stroke-width="3"/>
+    </g>
+
+    <!-- back desks -->
+    <g>
+      <path d="M120 640 L330 618 L352 650 L142 674 Z" fill="#f2e8d6"/>
+      <path d="M160 674 L160 760 M318 650 L318 742" fill="none" stroke-width="4"/>
+      <path d="M130 706 C176 694 262 690 330 700" fill="none" stroke="#d8c9ad" stroke-width="2.6"/>
+      <path d="M1220 628 L1420 650 L1392 682 L1196 660 Z" fill="#f2e8d6"/>
+      <path d="M1240 660 L1240 752 M1392 680 L1392 768" fill="none" stroke-width="4"/>
+      <path d="M1210 712 C1264 704 1338 712 1396 722" fill="none" stroke="#d8c9ad" stroke-width="2.6"/>
+    </g>
+
+    <!-- foreground desks -->
+    <g>
+      <path d="M200 840 L560 806 L620 852 L258 892 Z" fill="#f6ecda" stroke-width="4.4"/>
+      <path d="M250 892 L250 1000 M580 852 L580 1000" fill="none" stroke-width="5"/>
+      <path d="M280 884 C356 866 478 856 574 870" fill="none" stroke="#ddcfb5" stroke-width="2.6"/>
+      <path d="M1030 838 L1390 806 L1450 852 L1088 892 Z" fill="#f6ecda" stroke-width="4.4"/>
+      <path d="M1080 892 L1080 1000 M1410 852 L1410 1000" fill="none" stroke-width="5"/>
+      <path d="M1110 884 C1186 866 1308 856 1404 870" fill="none" stroke="#ddcfb5" stroke-width="2.6"/>
+    </g>
+
+    <!-- notebook and pen -->
+    <g transform="rotate(-4 820 896)">
+      <path d="M728 856 L894 844 L904 924 L738 936 Z" fill="#fdfaf2" stroke-width="3"/>
+      <path d="M812 850 L818 930" fill="none" stroke="#c9bda8" stroke-width="2.4"/>
+      <path d="M744 872 C780 868 808 866 806 866 M748 888 C784 884 806 882 810 882" fill="none" stroke="#aebfca" stroke-width="2.6"/>
+      <path d="M858 866 L942 852 L950 860 L866 876 Z" fill="#e7b7a8" stroke-width="2.6"/>
+    </g>
+
+    <!-- floor hatching -->
+    <g stroke="#ddcfb8" stroke-width="2.2" opacity=".65">
+      <path d="M60 940 L160 928 M300 968 L392 954 M480 930 L560 922 M1020 958 L1120 944 M1250 930 L1350 918 M1440 964 L1540 950"/>
+    </g>
+
+    <!-- little dust doodles -->
+    <g fill="none" stroke="#c9b898" stroke-width="2.2" opacity=".7">
+      <path d="M700 760 q6 -8 12 0 q6 8 12 0"/>
+      <path d="M920 726 q5 -7 10 0 q5 7 10 0"/>
+      <path d="M1080 780 l4 8 8 1 -6 5 2 8 -8 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+    </g>
+  </g>
+</svg>

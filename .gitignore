@@ -1,0 +1,25 @@
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 依赖与缓存
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 临时与备份（含会话日志、生成中间产物）
+tmp/
+
+# 日志与本地配置
+*.log
+.env
+.env.*
+
+# 生成图中间文件
+tools/out/
+tools/preview/

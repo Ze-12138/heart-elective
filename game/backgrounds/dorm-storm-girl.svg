@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="r" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="2" seed="221" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#ffe9a8" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#ffe9a8" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#2c3450"/>
+  <rect y="720" width="1600" height="280" fill="#232b41"/>
+  <path d="M0 720 C300 710 620 714 900 706 C1180 698 1400 704 1600 696 L1600 1000 L0 1000 Z" fill="#272f46"/>
+
+  <g filter="url(#r)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- storm window -->
+    <g stroke="#d9d2c2" stroke-width="3.6">
+      <rect x="110" y="90" width="420" height="440" rx="8" fill="#1a2338"/>
+      <rect x="132" y="112" width="376" height="396" fill="#232f4b"/>
+      <path d="M320 112 V508 M132 310 H508" stroke-width="4.6"/>
+      <path d="M398 128 L336 278 L392 264 L342 422 L452 240 L396 252 Z" fill="#f6e6b0" stroke="#f6e6b0" stroke-width="2.4"/>
+      <g stroke="#8fa2c4" stroke-width="2.2" opacity=".75">
+        <path d="M180 140 L160 230 M230 170 L210 260 M270 130 L250 220 M410 150 L390 240 M460 180 L440 270 M480 300 L460 390 M190 330 L170 420 M250 360 L230 450"/>
+      </g>
+      <path d="M110 90 C98 190 96 410 112 530 L128 530 C120 410 122 190 132 104 Z" fill="#39435e"/>
+      <path d="M530 90 C544 190 544 410 528 530 L512 530 C520 410 518 190 508 104 Z" fill="#39435e"/>
+    </g>
+    <path d="M140 530 L500 530 L860 800 L360 860 Z" fill="#c9d8ef" opacity=".06" stroke="none"/>
+
+    <!-- bed -->
+    <g stroke="#e9e2d2" stroke-width="3.6">
+      <rect x="846" y="520" width="76" height="420" rx="12" fill="#3a445e"/>
+      <path d="M120 650 L900 632 L928 890 L150 912 Z" fill="#3f4a64"/>
+      <path d="M120 650 L900 632 L906 692 L126 712 Z" fill="#48536e"/>
+      <path d="M138 712 L904 692 L920 828 L152 850 Z" fill="#434e68"/>
+      <path d="M150 850 L918 830 L924 890 L154 912 Z" fill="#3a445e"/>
+      <path d="M148 904 L148 956 M902 884 L902 936" fill="none" stroke-width="5"/>
+    </g>
+
+    <!-- pillow behind her -->
+    <g transform="rotate(-3 700 650)">
+      <path d="M560 564 C620 544 780 544 830 570 C848 608 844 664 820 690 C750 708 626 710 566 690 C546 660 546 600 560 564 Z" fill="#e6dfd1" stroke="#e9e2d2" stroke-width="3.4"/>
+    </g>
+
+    <!-- girl sitting up, hugging knees -->
+    <g>
+      <path d="M696 538 C646 538 622 574 628 622 C632 660 622 700 618 736 C616 758 630 772 650 772 L746 772 C766 772 778 758 776 736 C770 700 760 660 764 622 C770 574 746 538 696 538 Z" fill="#e8c07d" stroke="#4a3d35" stroke-width="3.2"/>
+      <path d="M646 560 C628 600 628 660 634 712 M746 560 C764 600 764 660 758 712" fill="none" stroke="#c99a58" stroke-width="2.4" opacity=".6"/>
+
+      <path d="M650 654 C658 638 674 630 696 630 C718 630 734 638 742 654 L762 742 C744 758 724 766 696 766 C668 766 648 758 630 742 Z" fill="#f3dfe2" stroke="#4a3d35" stroke-width="3.4"/>
+      <path d="M672 632 C680 648 712 648 720 632 L730 650 L662 650 Z" fill="#fdf8ee" stroke="#4a3d35" stroke-width="2.6"/>
+
+      <path d="M652 610 C652 578 672 558 696 558 C720 558 740 578 740 610 C740 642 720 662 696 662 C672 662 652 642 652 610 Z" fill="#f7ddc4" stroke="#4a3d35" stroke-width="3.6"/>
+      <path d="M656 600 C650 570 668 548 696 548 C724 548 742 570 736 600 C726 586 716 578 704 574 C694 588 680 590 668 584 C664 590 660 595 656 600 Z" fill="#e8c07d" stroke="#4a3d35" stroke-width="3"/>
+      <path d="M668 586 q10 8 20 2 M704 582 q6 6 10 9" fill="none" stroke="#c99a58" stroke-width="2.2" opacity=".85"/>
+
+      <path d="M666 602 q8 -4 15 -1 M726 602 q-8 -4 -15 -1" fill="none" stroke="#8a6045" stroke-width="2.6"/>
+      <circle cx="678" cy="616" r="4.2" fill="#4a3d35" stroke="none"/>
+      <circle cx="714" cy="616" r="4.2" fill="#4a3d35" stroke="none"/>
+      <path d="M688 636 q8 4 16 0" fill="none" stroke="#b06f63" stroke-width="2.6"/>
+      <g stroke="#ee9f97" stroke-width="2.2" opacity=".6">
+        <path d="M658 628 l6 -4 M662 633 l6 -4 M718 628 l6 4 M714 633 l6 4"/>
+      </g>
+    </g>
+
+    <!-- blanket over legs -->
+    <path d="M410 786 C440 730 520 700 610 700 C690 700 742 724 762 780 C780 832 754 866 700 878 C600 898 470 892 414 862 C388 848 390 816 410 786 Z" fill="#c9a3ae" stroke="#e9e2d2" stroke-width="3.6"/>
+    <path d="M438 770 C492 734 566 716 638 720 C690 722 730 738 750 766" fill="none" stroke="#e0c1c8" stroke-width="9" opacity=".9"/>
+    <path d="M444 818 C520 796 620 796 706 818" fill="none" stroke="#b48b98" stroke-width="2.6" opacity=".8"/>
+    <path d="M470 852 C546 836 632 838 700 854" fill="none" stroke="#b48b98" stroke-width="2.4" opacity=".7"/>
+    <path d="M520 728 C540 748 552 772 558 798 M690 726 C676 748 668 772 666 798" fill="none" stroke="#b48b98" stroke-width="2.4" opacity=".7"/>
+
+    <!-- arms hugging knees -->
+    <path d="M654 670 C628 692 620 722 630 742" fill="none" stroke="#4a3d35" stroke-width="24"/>
+    <path d="M654 670 C628 692 620 722 630 742" fill="none" stroke="#f3dfe2" stroke-width="15"/>
+    <path d="M738 670 C756 694 754 722 738 744" fill="none" stroke="#4a3d35" stroke-width="24"/>
+    <path d="M738 670 C756 694 754 722 738 744" fill="none" stroke="#f3dfe2" stroke-width="15"/>
+    <circle cx="634" cy="748" r="17" fill="#f7ddc4" stroke="#4a3d35" stroke-width="3.2"/>
+    <circle cx="734" cy="750" r="17" fill="#f7ddc4" stroke="#4a3d35" stroke-width="3.2"/>
+    <path d="M624 756 q10 4 20 0 M724 758 q10 4 20 0" fill="none" stroke="#4a3d35" stroke-width="2.2"/>
+
+    <!-- phone on blanket -->
+    <g transform="rotate(-10 792 842)">
+      <rect x="756" y="794" width="62" height="96" rx="9" fill="#fdf8ee" stroke="#4a3d35" stroke-width="3.4"/>
+      <rect x="764" y="804" width="46" height="76" rx="5" fill="#ffe9a8" stroke="none"/>
+      <path d="M787 842 c-5 -7 -15 -3 -13 5 c1 6 13 12 13 12 s12 -6 13 -12 c2 -8 -8 -12 -13 -5 Z" fill="#e88f88" stroke="none"/>
+    </g>
+    <circle cx="794" cy="844" r="140" fill="url(#glow)" stroke="none"/>
+
+    <!-- bedside table -->
+    <g stroke="#d9d2c2" stroke-width="3">
+      <path d="M1000 760 L1210 752 L1224 812 L1012 820 Z" fill="#3a445e"/>
+      <path d="M1024 818 L1024 920 M1200 810 L1200 912" fill="none" stroke-width="4.4"/>
+      <path d="M1040 700 L1080 700 L1090 760 L1030 760 Z" fill="#48536e"/>
+      <path d="M1060 700 L1060 672 M1060 672 C1040 660 1040 636 1060 636 C1080 636 1080 660 1060 672 Z" fill="#48536e" stroke-width="2.6"/>
+      <path d="M1120 742 C1120 726 1156 726 1158 742 L1152 774 C1150 784 1126 784 1124 774 Z" fill="#48536e" stroke-width="2.6"/>
+    </g>
+
+    <!-- rain and unease doodles -->
+    <g fill="none" stroke="#8fa2c4" stroke-width="2.2" opacity=".5">
+      <path d="M760 220 l3 7 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+      <path d="M860 300 q8 12 0 24 M880 320 q6 10 0 20"/>
+      <path d="M600 900 q16 -10 32 0"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="r" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="2" seed="62" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#f3efe7"/>
+  <rect width="1600" height="1000" fill="#e7e6e2"/>
+  <rect y="0" width="1600" height="540" fill="#dfe3e2"/>
+  <path d="M0 0 H1600 V520 C1300 500 1000 508 800 496 C560 482 300 504 0 520 Z" fill="#ece9e2"/>
+  <g filter="url(#r)" stroke="#4a423b" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- screen -->
+    <g>
+      <rect x="330" y="110" width="940" height="390" rx="8" fill="#fbf8ef" stroke-width="5"/>
+      <rect x="356" y="136" width="888" height="338" rx="4" fill="#dce9ee"/>
+      <path d="M356 402 C520 350 680 380 800 330 C940 272 1100 320 1244 286 L1244 474 L356 474 Z" fill="#e8efe8" opacity=".9"/>
+      <circle cx="1120" cy="220" r="38" fill="#f7ebc9" stroke-width="2.6"/>
+      <path d="M356 448 C560 432 760 442 960 424 C1100 412 1190 418 1244 428" fill="none" stroke="#c6d7dd" stroke-width="2.8"/>
+      <path d="M520 240 C560 220 600 220 640 240 C600 260 560 260 520 240 Z" fill="#f1f4ee" stroke-width="2.4" opacity=".9"/>
+      <path d="M700 210 q14 -14 28 0 q14 -14 28 0" fill="none" stroke="#f1f4ee" stroke-width="2.2" opacity=".9"/>
+      <path d="M900 360 C930 344 970 344 1000 360 C970 376 930 376 900 360 Z" fill="#f1f4ee" stroke-width="2.2" opacity=".8"/>
+      <g fill="#f7f3e8" opacity=".7">
+        <circle cx="420" cy="190" r="3"/><circle cx="460" cy="330" r="2.2"/>
+        <circle cx="1180" cy="400" r="2.4"/><circle cx="760" cy="180" r="2"/>
+      </g>
+    </g>
+
+    <!-- ceiling and side curtains -->
+    <g>
+      <path d="M0 0 C260 120 420 160 560 178 M1600 0 C1360 116 1200 156 1040 176" fill="none" stroke-width="3.4"/>
+      <path d="M0 70 C120 190 170 320 166 470 C160 600 120 700 60 760 L0 760 Z" fill="#e3dfd5"/>
+      <path d="M1600 70 C1480 190 1430 320 1434 470 C1440 600 1480 700 1540 760 L1600 760 Z" fill="#e3dfd5"/>
+      <path d="M40 160 C86 280 94 430 56 560 M1560 160 C1514 280 1506 430 1544 560" fill="none" stroke="#cbc4b6" stroke-width="2.6" opacity=".8"/>
+    </g>
+
+    <!-- aisle lights -->
+    <g>
+      <path d="M300 600 L300 900 M1300 600 L1300 900" fill="none" stroke="#cbc4b4" stroke-width="2.4"/>
+      <g fill="#f5e4ad" stroke="#b7a780" stroke-width="2.2">
+        <path d="M288 620 h24 v12 h-24 Z"/><path d="M288 690 h24 v12 h-24 Z"/>
+        <path d="M288 760 h24 v12 h-24 Z"/><path d="M288 830 h24 v12 h-24 Z"/>
+        <path d="M1288 620 h24 v12 h-24 Z"/><path d="M1288 690 h24 v12 h-24 Z"/>
+        <path d="M1288 760 h24 v12 h-24 Z"/><path d="M1288 830 h24 v12 h-24 Z"/>
+      </g>
+      <g fill="#f8eabd" opacity=".5" stroke="none">
+        <circle cx="300" cy="640" r="22"/><circle cx="300" cy="710" r="22"/><circle cx="300" cy="780" r="22"/>
+        <circle cx="1300" cy="640" r="22"/><circle cx="1300" cy="710" r="22"/><circle cx="1300" cy="780" r="22"/>
+      </g>
+    </g>
+
+    <!-- seat rows -->
+    <g>
+      <g fill="#dfe3e2" stroke-width="3.2">
+        <path d="M120 610 C170 582 250 578 306 604 L306 690 L120 700 Z"/>
+        <path d="M340 604 C390 576 470 572 526 598 L526 684 L340 694 Z"/>
+        <path d="M560 598 C610 570 690 566 746 592 L746 678 L560 688 Z"/>
+        <path d="M780 592 C830 564 910 560 966 586 L966 672 L780 682 Z"/>
+        <path d="M1000 586 C1050 558 1130 554 1186 580 L1186 666 L1000 676 Z"/>
+        <path d="M1220 580 C1270 552 1350 548 1406 574 L1406 660 L1220 670 Z"/>
+      </g>
+      <path d="M120 660 C180 640 260 638 306 654 M340 654 C400 634 480 632 526 648 M560 648 C620 628 700 626 746 642 M780 642 C840 622 920 620 966 636 M1000 636 C1060 616 1140 614 1186 630 M1220 630 C1280 610 1360 608 1406 624" fill="none" stroke="#c0c4c0" stroke-width="2.4"/>
+
+      <g fill="#d6dbda" stroke-width="3.4">
+        <path d="M60 760 C130 720 250 714 330 748 L330 860 L60 874 Z"/>
+        <path d="M370 744 C440 704 560 698 640 732 L640 844 L370 858 Z"/>
+        <path d="M680 732 C750 692 870 686 950 720 L950 832 L680 846 Z"/>
+        <path d="M990 720 C1060 680 1180 674 1260 708 L1260 820 L990 834 Z"/>
+        <path d="M1300 708 C1370 668 1470 664 1540 696 L1540 812 L1300 826 Z"/>
+      </g>
+      <path d="M60 830 C150 796 260 794 330 818 M370 814 C460 780 570 778 640 802 M680 802 C770 768 880 766 950 790 M990 790 C1080 756 1190 754 1260 778 M1300 778 C1390 746 1480 744 1540 764" fill="none" stroke="#b7bdb8" stroke-width="2.4"/>
+    </g>
+
+    <!-- foreground heads silhouette (very light) -->
+    <g fill="#e9e5db" stroke="#bdb7aa" stroke-width="2.8" opacity=".8">
+      <path d="M180 940 C180 890 214 862 250 862 C286 862 320 890 320 940 L330 1000 L170 1000 Z"/>
+      <path d="M1210 940 C1210 890 1244 862 1280 862 C1316 862 1350 890 1350 940 L1360 1000 L1200 1000 Z"/>
+    </g>
+
+    <!-- floating light doodles -->
+    <g fill="none" stroke="#c9a86e" stroke-width="2.2" opacity=".65">
+      <path d="M480 210 l3 6 7 1 -5 4 2 7 -7 -3 -6 3 2 -7 -5 -4 7 -1 Z"/>
+      <path d="M1060 320 l2 5 6 1 -4 3 1 6 -5 -3 -5 3 1 -6 -4 -3 6 -1 Z"/>
+    </g>
+  </g>
+</svg>

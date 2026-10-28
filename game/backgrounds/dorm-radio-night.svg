@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="r" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="2" seed="231" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#313a54"/>
+  <rect y="760" width="1600" height="240" fill="#272f44"/>
+  <path d="M0 760 C320 748 620 754 900 746 C1180 738 1420 744 1600 736 L1600 1000 L0 1000 Z" fill="#2a3248"/>
+
+  <g filter="url(#r)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- window -->
+    <g stroke="#e9e2d2" stroke-width="3.6">
+      <rect x="1030" y="90" width="420" height="430" rx="8" fill="#1b2540"/>
+      <rect x="1052" y="112" width="376" height="386" fill="#202b49"/>
+      <path d="M1240 112 V498 M1052 305 H1428" stroke-width="4.6"/>
+      <circle cx="1300" cy="232" r="50" fill="#f6e6b0" stroke-width="3"/>
+      <circle cx="1282" cy="218" r="8" fill="#e8d294" stroke="none"/>
+      <circle cx="1318" cy="250" r="5" fill="#e8d294" stroke="none"/>
+      <g fill="#f4e7b8" stroke="none">
+        <circle cx="1100" cy="160" r="2.8"/><circle cx="1160" cy="210" r="2.2"/>
+        <circle cx="1100" cy="270" r="2"/><circle cx="1370" cy="160" r="2.4"/>
+        <circle cx="1390" cy="250" r="2"/><circle cx="1140" cy="390" r="2.2"/>
+        <path d="M1180 150 l3 7 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+      </g>
+      <path d="M1030 90 C1018 190 1016 400 1032 520 L1048 520 C1040 400 1042 190 1052 104 Z" fill="#3b4763"/>
+      <path d="M1450 90 C1464 190 1464 400 1448 520 L1432 520 C1440 400 1438 190 1428 104 Z" fill="#3b4763"/>
+      <path d="M1030 96 C1090 84 1160 84 1220 94 M1252 94 C1320 82 1390 84 1450 96" fill="none" stroke="#d9d2c2" stroke-width="2.6" opacity=".7"/>
+    </g>
+
+    <!-- poster, clock, string lights -->
+    <g stroke="#d9d2c2" stroke-width="2.8" fill="none" opacity=".9">
+      <rect x="780" y="160" width="170" height="210" rx="5" fill="#3a4660"/>
+      <path d="M812 320 C844 280 884 280 916 320 C884 360 844 360 812 320 Z" fill="#46536d"/>
+      <circle cx="892" cy="220" r="16" fill="#f6e6b0" stroke="#f6e6b0" stroke-width="2"/>
+      <circle cx="560" cy="220" r="30" fill="#38445c"/>
+      <path d="M560 220 L560 202 M560 220 L572 226"/>
+    </g>
+    <g fill="none" stroke="#d9d2c2" stroke-width="2.2" opacity=".75">
+      <path d="M300 160 C460 200 620 178 780 214"/>
+      <g fill="#f6e6b0" stroke="none">
+        <circle cx="350" cy="174" r="4.5"/><circle cx="440" cy="186" r="4.5"/>
+        <circle cx="530" cy="192" r="4.5"/><circle cx="620" cy="192" r="4.5"/>
+        <circle cx="710" cy="204" r="4.5"/>
+      </g>
+    </g>
+
+    <!-- on air sign -->
+    <g transform="rotate(-2 880 420)">
+      <rect x="800" y="380" width="170" height="76" rx="8" fill="#3a4660" stroke="#e88f88" stroke-width="3"/>
+      <text x="885" y="431" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#f2b3ae" stroke="none" letter-spacing="4">ON AIR</text>
+    </g>
+
+    <!-- girl at the radio desk -->
+    <g>
+      <path d="M620 306 C548 306 520 352 524 420 C528 494 520 570 514 626 C512 652 526 670 546 670 L694 670 C714 670 728 652 726 626 C720 570 712 494 716 420 C720 352 692 306 620 306 Z" fill="#e8c07d" stroke="#4a3d35" stroke-width="3.2"/>
+      <path d="M552 430 C540 490 536 570 534 630 M688 430 C700 490 704 570 706 630" fill="none" stroke="#c99a58" stroke-width="2.4" opacity=".55"/>
+
+      <path d="M548 466 C558 446 578 436 620 436 C662 436 682 446 692 466 L722 704 L518 704 Z" fill="#f3dfe2" stroke="#4a3d35" stroke-width="3.4"/>
+      <path d="M584 464 C590 488 650 488 656 464 L666 500 L574 500 Z" fill="#fdf8ee" stroke="#4a3d35" stroke-width="2.8"/>
+
+      <path d="M632 236 L632 300 M566 262 C566 214 604 190 632 190 C660 190 690 214 690 262" fill="none" stroke="#4a3d35" stroke-width="9"/>
+      <rect x="548" y="254" width="32" height="58" rx="15" fill="#4a3d35" stroke="#4a3d35" stroke-width="3"/>
+      <rect x="684" y="254" width="32" height="58" rx="15" fill="#4a3d35" stroke="#4a3d35" stroke-width="3"/>
+
+      <path d="M578 386 C578 344 598 322 632 322 C666 322 686 344 686 386 C686 430 664 452 632 452 C600 452 578 430 578 386 Z" fill="#f7ddc4" stroke="#4a3d35" stroke-width="3.6"/>
+      <path d="M572 382 C566 326 592 300 632 300 C672 300 698 326 692 382 C680 362 668 346 654 336 C640 354 616 360 596 350 C588 360 580 370 572 382 Z" fill="#e8c07d" stroke="#4a3d35" stroke-width="3.2"/>
+      <path d="M574 380 C566 420 566 462 572 492 M690 380 C698 420 698 462 692 492" fill="none" stroke="#e8c07d" stroke-width="13"/>
+      <path d="M574 380 C566 420 566 462 572 492 M690 380 C698 420 698 462 692 492" fill="none" stroke="#c99a58" stroke-width="2" opacity=".5"/>
+
+      <g transform="rotate(-14 682 330)">
+        <path d="M682 330 C672 318 660 324 666 334 C660 344 672 350 682 338 Z" fill="#e8a06f" stroke="#4a3d35" stroke-width="2.4"/>
+        <path d="M682 330 C692 318 704 324 698 334 C704 344 692 350 682 338 Z" fill="#e8a06f" stroke="#4a3d35" stroke-width="2.4"/>
+        <circle cx="682" cy="334" r="3.4" fill="#f4c39a" stroke="#4a3d35" stroke-width="1.8"/>
+      </g>
+
+      <circle cx="616" cy="394" r="4.4" fill="#4a3d35" stroke="none"/>
+      <circle cx="654" cy="394" r="4.4" fill="#4a3d35" stroke="none"/>
+      <path d="M620 408 q12 7 24 0" fill="none" stroke="#b06f63" stroke-width="2.8"/>
+      <g stroke="#ee9f97" stroke-width="2.2" opacity=".6">
+        <path d="M596 406 l7 -5 M600 412 l7 -5 M666 404 l7 5 M662 410 l7 5"/>
+      </g>
+
+      <path d="M552 500 C530 540 522 600 534 652" fill="none" stroke="#4a3d35" stroke-width="22"/>
+      <path d="M552 500 C530 540 522 600 534 652" fill="none" stroke="#f3dfe2" stroke-width="14"/>
+      <path d="M688 500 C712 540 720 600 708 652" fill="none" stroke="#4a3d35" stroke-width="22"/>
+      <path d="M688 500 C712 540 720 600 708 652" fill="none" stroke="#f3dfe2" stroke-width="14"/>
+      <circle cx="536" cy="656" r="17" fill="#f7ddc4" stroke="#4a3d35" stroke-width="3.2"/>
+      <circle cx="706" cy="656" r="17" fill="#f7ddc4" stroke="#4a3d35" stroke-width="3.2"/>
+    </g>
+
+    <!-- script on desk -->
+    <g transform="rotate(-4 600 700)">
+      <rect x="542" y="672" width="120" height="54" rx="4" fill="#e6dfd1" stroke="#d9d2c2" stroke-width="2.6"/>
+      <path d="M558 688 h80 M558 700 h64 M558 712 h74" stroke="#8f887b" stroke-width="2.2"/>
+    </g>
+
+    <!-- desk -->
+    <g stroke="#d9d2c2" stroke-width="3.4">
+      <path d="M220 720 L1040 704 L1064 772 L236 790 Z" fill="#3d4863"/>
+      <path d="M236 790 L236 940 M1034 772 L1034 918" fill="none" stroke-width="5"/>
+      <path d="M260 850 L1006 832" fill="none" stroke="#4f5b77" stroke-width="2.6"/>
+    </g>
+
+    <!-- microphone and radio console -->
+    <g stroke="#e9e2d2" stroke-width="3">
+      <path d="M884 726 L884 600 C884 560 856 536 820 532" fill="none" stroke-width="4"/>
+      <path d="M820 532 L790 522" fill="none" stroke-width="4"/>
+      <g transform="rotate(-20 780 512)">
+        <rect x="750" y="480" width="58" height="76" rx="26" fill="#46536d"/>
+        <path d="M760 492 h38 M760 506 h38 M760 520 h38 M760 534 h38" stroke="#8fa2c4" stroke-width="2.2"/>
+        <path d="M779 556 L779 574" stroke-width="3"/>
+      </g>
+      <rect x="330" y="664" width="190" height="70" rx="8" fill="#3a4660"/>
+      <circle cx="370" cy="690" r="9" fill="#f2b3ae"/>
+      <circle cx="400" cy="690" r="9" fill="#f6e6b0"/>
+      <path d="M430 682 h66 M430 696 h48" stroke="#8fa2c4" stroke-width="3"/>
+      <path d="M350 714 q16 -12 32 0 q16 12 32 0" fill="none" stroke="#8fa2c4" stroke-width="2.4"/>
+    </g>
+
+    <!-- desk lamp -->
+    <g stroke="#d9d2c2" stroke-width="3">
+      <path d="M950 700 L950 612" fill="none" stroke-width="4"/>
+      <path d="M912 612 L988 612 L1002 650 L898 650 Z" fill="#46536d"/>
+      <ellipse cx="950" cy="706" rx="86" ry="24" fill="#f6e6b0" opacity=".12" stroke="none"/>
+    </g>
+
+    <!-- sound doodles -->
+    <g fill="none" stroke="#8fa2c4" stroke-width="2.4" opacity=".65">
+      <path d="M330 420 q-18 22 0 44 M300 408 q-28 34 0 68"/>
+      <path d="M900 520 q16 -10 32 0"/>
+      <path d="M480 260 l3 7 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+    </g>
+  </g>
+</svg>

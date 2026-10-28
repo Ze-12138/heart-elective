@@ -1,0 +1,410 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8eb">
+  <meta name="description" content="心动选修课：一个关于倾听、边界与分寸的校园恋爱互动故事。">
+  <title>心动选修课 · 奶龙酱</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <script>
+    // 页面出错时把错误显示出来，方便排查
+    window.addEventListener("error", function (event) {
+      var box = document.getElementById("boot-error");
+      if (!box) return;
+      box.hidden = false;
+      box.textContent = "页面出错：" + (event.message || "资源加载失败") +
+        (event.filename ? "\n" + event.filename + ":" + event.lineno : "");
+    }, true);
+    window.addEventListener("unhandledrejection", function (event) {
+      var box = document.getElementById("boot-error");
+      if (!box) return;
+      box.hidden = false;
+      box.textContent = "页面出错：" + (event.reason && event.reason.message || event.reason);
+    });
+  </script>
+  <style>
+    #boot-error {
+      position: fixed;
+      left: 12px;
+      bottom: 12px;
+      z-index: 9999;
+      max-width: 78vw;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #fff3f2;
+      border: 1px solid #e2a7a2;
+      color: #8c3a34;
+      font: 13px/1.5 "Microsoft YaHei", sans-serif;
+      white-space: pre-wrap;
+    }
+  </style>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./story.js" defer></script>
+  <script src="./minigame.js" defer></script>
+  <script src="./game.js" defer></script>
+</head>
+<body data-phase="title" data-mode="dialogue">
+  <svg class="filter-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- 像素化滤镜：把整层场景（背景 + 立绘）按不同颗粒度打散 -->
+      <!-- 窗帘飘动：湍流频率缓慢变化，让原图那块布料轻轻起伏 -->
+      <filter id="curtain-sway" x="-6%" y="-6%" width="112%" height="112%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" seed="4" result="n">
+          <animate attributeName="baseFrequency" dur="11s" repeatCount="indefinite"
+                   values="0.008 0.02; 0.013 0.028; 0.006 0.018; 0.008 0.02"/>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="pixel-fine" x="0" y="0" width="100%" height="100%">
+        <feFlood x="3" y="3" height="2" width="2"/>
+        <feComposite width="7" height="7"/>
+        <feTile result="t"/>
+        <feComposite in="SourceGraphic" in2="t" operator="in"/>
+        <feMorphology operator="dilate" radius="3"/>
+      </filter>
+      <filter id="pixel-mid" x="0" y="0" width="100%" height="100%">
+        <feFlood x="5" y="5" height="2" width="2"/>
+        <feComposite width="11" height="11"/>
+        <feTile result="t"/>
+        <feComposite in="SourceGraphic" in2="t" operator="in"/>
+        <feMorphology operator="dilate" radius="5"/>
+      </filter>
+      <!-- 手绘感：用湍流轻微置换边缘，让墨线不那么笔直 -->
+      <filter id="hand-soft" x="-2%" y="-2%" width="104%" height="104%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="7" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="hand-rougher" x="-2%" y="-2%" width="104%" height="104%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="5" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4.5" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="hand-strong" x="-2%" y="-2%" width="104%" height="104%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.024" numOctaves="3" seed="11" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="5.5" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="pixel-coarse" x="0" y="0" width="100%" height="100%">
+        <feFlood x="7" y="7" height="2" width="2"/>
+        <feComposite width="15" height="15"/>
+        <feTile result="t"/>
+        <feComposite in="SourceGraphic" in2="t" operator="in"/>
+        <feMorphology operator="dilate" radius="7"/>
+      </filter>
+    </defs>
+  </svg>
+  <pre id="boot-error" hidden></pre>
+  <main class="game-shell" id="game-shell">
+    <div id="scene" class="scene bg-campus" aria-hidden="true">
+      <div class="particles" id="particles"></div>
+      <div class="rain-layer" id="rain-layer"></div>
+      <div class="flash-overlay" id="flash-overlay"></div>
+      <div class="paper-grain" aria-hidden="true"></div>
+      <div class="pencil-grain" aria-hidden="true"></div>
+      <div class="vignette"></div>
+      <div class="light-pass" aria-hidden="true"></div>
+      <div class="props-layer" id="props-layer" aria-hidden="true"></div>
+      <div class="scene-fx" id="scene-fx" aria-hidden="true"></div>
+      <div class="fx-layer" id="fx-dorm" aria-hidden="true">
+        <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="fxGlow">
+              <stop offset="0" stop-color="#ffe9a8" stop-opacity=".55"/>
+              <stop offset=".6" stop-color="#ffe9a8" stop-opacity=".18"/>
+              <stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle class="fx-star tw1 fx-night-only" cx="176" cy="150" r="3.2" fill="#f4e7b8"/>
+          <circle class="fx-star tw2 fx-night-only" cx="252" cy="342" r="2.4" fill="#f4e7b8"/>
+          <circle class="fx-star tw3 fx-night-only" cx="452" cy="180" r="2.8" fill="#f4e7b8"/>
+          <circle class="fx-pulse fx-night-only" cx="560" cy="620" r="130" fill="url(#fxGlow)"/>
+          <g class="curtains">
+            <g class="curtain curtain-left">
+              <path d="M96 96 C170 88 250 88 322 96 C314 180 318 300 310 400 C306 470 304 510 300 522 C230 530 150 528 96 524 Z" fill="#d9b6bd" stroke="#4a3d35" stroke-width="3"/>
+              <path d="M132 106 C138 220 134 380 130 512 M172 102 C178 224 176 386 172 518 M212 100 C216 226 214 390 212 520 M252 100 C256 228 254 392 252 521 M292 102 C294 230 292 396 290 520" fill="none" stroke="#c298a2" stroke-width="4" opacity=".85"/>
+              <path d="M112 120 C114 240 112 400 112 516" fill="none" stroke="#e6c7cc" stroke-width="6" opacity=".8"/>
+            </g>
+            <g class="curtain curtain-right">
+              <path d="M544 96 C470 88 390 88 318 96 C326 180 322 300 330 400 C334 470 336 510 340 522 C410 530 490 528 544 524 Z" fill="#d9b6bd" stroke="#4a3d35" stroke-width="3"/>
+              <path d="M508 106 C502 220 506 380 510 512 M468 102 C462 224 464 386 468 518 M428 100 C424 226 426 390 428 520 M388 100 C384 228 386 392 388 521 M348 102 C346 230 348 396 350 520" fill="none" stroke="#c298a2" stroke-width="4" opacity=".85"/>
+              <path d="M528 120 C526 240 528 400 528 516" fill="none" stroke="#e6c7cc" stroke-width="6" opacity=".8"/>
+            </g>
+            <path d="M92 84 H548" stroke="#a9785a" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="92" cy="84" r="9" fill="#a9785a"/>
+            <circle cx="548" cy="84" r="9" fill="#a9785a"/>
+          </g>
+          <rect class="curtain-hit" x="120" y="100" width="400" height="420" fill="transparent"/>
+          <g class="curtain-hint">
+            <rect x="200" y="446" width="240" height="52" rx="26" fill="#20283f" opacity=".62"/>
+            <text x="320" y="480" text-anchor="middle">点窗户 · 拉窗帘</text>
+          </g>
+          <g id="fx-plush">
+            <g class="plush-react">
+              <path d="M330 700 c-4 -6 -12 -3 -11 3 c1 5 11 10 11 10 s10 -5 11 -10 c1 -6 -7 -9 -11 -3 Z" fill="#e88f88" stroke="#4a3d35" stroke-width="2"/>
+              <path d="M352 686 c-3 -5 -10 -2 -9 3 c1 4 9 8 9 8 s8 -4 9 -8 c1 -5 -6 -8 -9 -3 Z" fill="#f2a7a0" stroke="#4a3d35" stroke-width="1.8"/>
+              <path d="M372 704 c-3 -4 -8 -2 -7 2 c1 3 7 6 7 6 s6 -3 7 -6 c1 -4 -5 -6 -7 -2 Z" fill="#e88f88" stroke="#4a3d35" stroke-width="1.8"/>
+            </g>
+            <circle class="plush-hit" cx="342" cy="742" r="48" fill="transparent"/>
+          </g>
+          <g id="fx-pat">
+            <g class="pat-react">
+              <rect x="596" y="596" width="188" height="46" rx="23" fill="#fdf8ee" stroke="#4a3d35" stroke-width="2.4"/>
+              <text x="690" y="626" text-anchor="middle">你拍了拍奶龙酱</text>
+            </g>
+            <circle class="pat-hit" cx="690" cy="742" r="88" fill="transparent"/>
+          </g>
+        </svg>
+      </div>
+      <div class="fx-layer" id="fx-radio" aria-hidden="true">
+        <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+          <circle class="fx-star tw2" cx="1100" cy="160" r="2.8" fill="#f4e7b8"/>
+          <circle class="fx-star tw3" cx="1390" cy="250" r="2.4" fill="#f4e7b8"/>
+          <g class="curtains">
+            <g class="curtain curtain-left">
+              <path d="M1016 96 C1090 88 1170 88 1242 96 C1234 180 1238 300 1230 400 C1226 470 1224 510 1220 522 C1150 530 1070 528 1016 524 Z" fill="#d9b6bd" stroke="#4a3d35" stroke-width="3"/>
+              <path d="M1052 106 C1058 220 1054 380 1050 512 M1092 102 C1098 224 1096 386 1092 518 M1132 100 C1136 226 1134 390 1132 520 M1172 100 C1176 228 1174 392 1172 521 M1212 102 C1214 230 1212 396 1210 520" fill="none" stroke="#c298a2" stroke-width="4" opacity=".85"/>
+              <path d="M1032 120 C1034 240 1032 400 1032 516" fill="none" stroke="#e6c7cc" stroke-width="6" opacity=".8"/>
+            </g>
+            <g class="curtain curtain-right">
+              <path d="M1464 96 C1390 88 1310 88 1238 96 C1246 180 1242 300 1250 400 C1254 470 1256 510 1260 522 C1330 530 1410 528 1464 524 Z" fill="#d9b6bd" stroke="#4a3d35" stroke-width="3"/>
+              <path d="M1428 106 C1422 220 1426 380 1430 512 M1388 102 C1382 224 1384 386 1388 518 M1348 100 C1344 226 1346 390 1348 520 M1308 100 C1304 228 1306 392 1308 521 M1268 102 C1266 230 1268 396 1270 520" fill="none" stroke="#c298a2" stroke-width="4" opacity=".85"/>
+              <path d="M1448 120 C1446 240 1448 400 1448 516" fill="none" stroke="#e6c7cc" stroke-width="6" opacity=".8"/>
+            </g>
+            <path d="M1012 84 H1468" stroke="#a9785a" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="1012" cy="84" r="9" fill="#a9785a"/>
+            <circle cx="1468" cy="84" r="9" fill="#a9785a"/>
+          </g>
+          <rect class="curtain-hit" x="1040" y="100" width="400" height="400" fill="transparent"/>
+          <g class="curtain-hint">
+            <rect x="1120" y="430" width="240" height="52" rx="26" fill="#20283f" opacity=".62"/>
+            <text x="1240" y="464" text-anchor="middle">点窗户 · 拉窗帘</text>
+          </g>
+        </svg>
+      </div>
+      <div class="fx-layer" id="fx-ferris" aria-hidden="true">
+        <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+          <g class="ferris-wheel" stroke="#efe9da" fill="none">
+            <circle cx="900" cy="420" r="282" stroke-width="2.4" stroke-dasharray="6 10" opacity=".75"/>
+            <g stroke-width="2.6" opacity=".9">
+              <path d="M900 420 L900 120 M900 420 L900 720 M900 420 L600 420 M900 420 L1200 420"/>
+              <path d="M900 420 L688 208 M900 420 L1112 208 M900 420 L688 632 M900 420 L1112 632"/>
+              <path d="M900 420 L762 170 M900 420 L1038 170 M900 420 L762 670 M900 420 L1038 670"/>
+              <path d="M900 420 L652 308 M900 420 L1148 308 M900 420 L652 532 M900 420 L1148 532"/>
+              <path d="M900 420 L820 142 M900 420 L980 142 M900 420 L820 698 M900 420 L980 698"/>
+              <path d="M900 420 L620 260 M900 420 L1180 260 M900 420 L620 580 M900 420 L1180 580"/>
+            </g>
+            <g fill="#e8dcc3" stroke-width="3">
+              <path d="M884 112 L916 112 L922 148 L878 148 Z"/>
+              <path d="M884 692 L916 692 L922 728 L878 728 Z"/>
+              <path d="M592 408 L628 408 L634 444 L586 444 Z"/>
+              <path d="M1166 396 L1202 396 L1208 432 L1160 432 Z"/>
+              <path d="M664 196 L696 180 L712 212 L682 228 Z"/>
+              <path d="M1104 196 L1136 180 L1152 212 L1122 228 Z"/>
+              <path d="M664 644 L696 660 L712 628 L682 612 Z"/>
+              <path d="M1104 644 L1136 660 L1152 628 L1122 612 Z"/>
+              <path d="M746 158 L778 142 L794 174 L764 190 Z"/>
+              <path d="M1022 158 L1054 142 L1070 174 L1040 190 Z"/>
+              <path d="M746 682 L778 698 L794 666 L764 650 Z"/>
+              <path d="M1022 682 L1054 698 L1070 666 L1040 650 Z"/>
+              <path d="M600 248 L632 232 L648 264 L618 280 Z"/>
+              <path d="M1168 248 L1200 232 L1216 264 L1186 280 Z"/>
+              <path d="M600 592 L632 608 L648 576 L618 560 Z"/>
+              <path d="M1168 592 L1200 608 L1216 576 L1186 560 Z"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="characters" id="characters">
+        <div class="character boy" id="boy" data-expression="normal" aria-label="男生"></div>
+        <div class="character girl" id="girl" data-expression="normal" aria-label="奶龙酱"></div>
+      </div>
+      <div class="click-catcher" id="click-catcher" aria-hidden="true"></div>
+    </div>
+
+    <header class="hud" id="hud">
+      <div class="hud-left">
+        <div class="chapter-chip" id="chapter-chip">第一章 · 第三排靠窗</div>
+        <div class="step-chip" id="step-chip">第 1 / 16 次选择</div>
+      </div>
+      <div class="hud-right">
+        <button id="play-button" class="memory-button play-button" type="button" aria-haspopup="dialog">
+          <span class="memory-icon" aria-hidden="true">◍</span>
+          <span class="memory-label">一起玩</span>
+        </button>
+        <button id="clue-toggle" class="memory-button clue-button" type="button" aria-haspopup="dialog">
+          <span class="memory-icon" aria-hidden="true">◎</span>
+          <span class="memory-label">细节</span>
+          <span class="memory-count" id="clue-count">0</span>
+        </button>
+        <button id="memory-button" class="memory-button" type="button" aria-haspopup="dialog">
+          <span class="memory-icon" aria-hidden="true">✦</span>
+          <span class="memory-label">回忆</span>
+          <span class="memory-count" id="memory-count">0 / 9</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="memory-toast" id="memory-toast" role="status" aria-live="polite"></div>
+
+    <section class="dialogue-layer" id="dialogue-layer">
+      <p class="narration" id="narration"></p>
+      <div class="dialogue-bottom">
+        <div class="options" id="options" aria-label="回应选项" aria-live="polite"></div>
+        <div class="dialogue-card" id="dialogue-card" role="button" tabindex="0" aria-label="点击继续">
+          <span class="speaker" id="speaker">旁白</span>
+          <p class="dialogue-text" id="dialogue-text"></p>
+          <span class="next-hint" id="next-hint">点击继续</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="chat-panel hidden" id="chat-panel" aria-label="微信聊天">
+      <div class="chat-head">
+        <div class="chat-avatar" aria-hidden="true">奶</div>
+        <div class="chat-id">
+          <strong>奶龙酱</strong>
+          <span id="chat-status">微信 · 在线</span>
+        </div>
+        <div class="chat-more" id="chat-more" role="button" tabindex="0" aria-label="查看奶龙酱的朋友圈">•••</div>
+      </div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <div class="chat-options" id="chat-options" aria-label="回复选项" aria-live="polite"></div>
+    </section>
+
+    <section class="moments-panel hidden" id="moments-panel" aria-label="奶龙酱的朋友圈">
+      <div class="moments-head">
+        <button class="moments-back" id="moments-close" type="button" aria-label="关闭朋友圈">←</button>
+        <div class="moments-title">
+          <strong>奶龙酱</strong>
+          <span>朋友圈</span>
+        </div>
+        <div class="chat-more" aria-hidden="true">•••</div>
+      </div>
+      <div class="moments-feed" id="moments-feed"></div>
+    </section>
+
+    <section class="screen title-screen" id="title-screen">
+      <div class="title-card">
+        <p class="title-eyebrow">CAMPUS × LOVE × CHOICE</p>
+        <h1>心动选修课</h1>
+        <p class="title-subtitle">从借一支笔开始，<br>慢慢学会看见一个人。</p>
+        <ul class="title-points" aria-label="游戏信息">
+          <li>5 章</li>
+          <li>16 个选择</li>
+          <li>约 30 分钟</li>
+        </ul>
+        <div class="title-actions">
+          <button id="start-button" class="primary-button" type="button">开始选修 →</button>
+          <button id="continue-button" class="ghost-button hidden" type="button">继续上次</button>
+        </div>
+        <p class="title-note">好感度不会立刻给你答案。<br>走完这段路，再一起复盘。</p>
+        <p class="title-secret">故事里的每一个细节，都可能在后面等你。</p>
+      </div>
+    </section>
+
+    <section class="chapter-overlay hidden" id="chapter-overlay" role="presentation">
+      <div class="chapter-inner">
+        <p class="chapter-number" id="chapter-number">01</p>
+        <span class="chapter-rule" aria-hidden="true"></span>
+        <h2 id="chapter-title">第三排靠窗</h2>
+        <p id="chapter-subtitle">有些喜欢，是从借一支笔开始的。</p>
+      </div>
+      <span class="chapter-skip">点击跳过</span>
+    </section>
+
+    <section class="screen ending-screen hidden" id="ending-screen">
+      <div class="ending-card">
+        <p class="ending-eyebrow">ENDING UNLOCKED ✦</p>
+        <h2 id="ending-title">双向奔赴</h2>
+        <p class="ending-subtitle" id="ending-subtitle"></p>
+        <p class="ending-flavor" id="ending-flavor"></p>
+        <p class="ending-text" id="ending-text"></p>
+
+        <div class="score-reveal">
+          <div class="score-ring" id="score-ring">
+            <span id="ending-score">--</span>
+            <small>心动值</small>
+          </div>
+          <div class="score-copy">
+            <p class="score-label" id="ending-score-label"></p>
+            <div class="score-track" aria-hidden="true">
+              <div class="score-fill" id="ending-score-fill"></div>
+            </div>
+            <p class="score-note">这次不是评分，是把你们走过的路摊开来看。</p>
+          </div>
+        </div>
+
+        <div class="review-grid">
+          <section class="review-block">
+            <h3>她说过的话</h3>
+            <p class="review-sub">记住的细节，后来都用上了吗？</p>
+            <ul class="memory-review" id="memory-review"></ul>
+          </section>
+          <section class="review-block">
+            <h3>本局复盘</h3>
+            <p class="review-sub">做得好的瞬间</p>
+            <ul class="choice-review" id="choice-good"></ul>
+            <p class="review-sub growth">还可以更好的瞬间</p>
+            <ul class="choice-review" id="choice-growth"></ul>
+          </section>
+        </div>
+
+        <p class="ending-advice" id="ending-advice"></p>
+
+        <div class="egg-card">
+          <p class="egg-hint">如果现实里也有一个她，写下她的名字吧。</p>
+          <div class="egg-row">
+            <input id="crush-name" class="egg-input" type="text" maxlength="16"
+                   placeholder="她的名字（可留空）" autocomplete="off" aria-label="她的名字">
+            <button id="egg-button" class="secondary-button" type="button">开启我的故事</button>
+          </div>
+          <p class="egg-privacy">名字只留在当前页面，不会上传，也不会写入存档。</p>
+        </div>
+
+        <div class="ending-actions">
+          <button id="again-button" class="primary-button" type="button">再走一次 ↻</button>
+          <button id="title-button" class="ghost-button" type="button">回到标题</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen egg-screen hidden" id="egg-screen">
+      <div class="egg-poem" aria-live="polite">
+        <p class="egg-to hidden" id="egg-to"></p>
+        <p class="egg-line">爱人如养花，</p>
+        <p class="egg-line">开启自己的故事吧。</p>
+        <button id="egg-back" class="egg-back" type="button">回到开头</button>
+      </div>
+    </section>
+
+    <section class="screen memory-panel hidden" id="memory-panel" role="dialog" aria-modal="true" aria-labelledby="memory-title">
+      <div class="memory-card">
+        <div class="memory-head">
+          <div>
+            <p class="memory-eyebrow">MEMORY</p>
+            <h2 id="memory-title">她说过的话</h2>
+          </div>
+          <button id="memory-close" class="memory-close" type="button" aria-label="关闭回忆">×</button>
+        </div>
+        <p class="memory-sub">你记住的细节，会在某个时刻派上用场。</p>
+        <ul class="memory-list" id="memory-list"></ul>
+        <p class="memory-foot">回忆不会告诉你对错，只记录你听见了什么。</p>
+      </div>
+    </section>
+
+    <section class="screen clue-panel-host hidden" id="clue-panel" role="dialog" aria-modal="true" aria-labelledby="clue-title">
+      <div class="memory-card clue-card">
+        <div class="memory-head">
+          <div>
+            <p class="memory-eyebrow">DETAILS</p>
+            <h2 id="clue-title">房间里的细节</h2>
+          </div>
+          <button id="clue-close" class="memory-close" type="button" aria-label="关闭细节">×</button>
+        </div>
+        <p class="memory-sub">你注意到的东西，会变成之后能用的线索。</p>
+        <ul class="clue-list" id="clue-list"></ul>
+        <p class="memory-foot">房间里的物件可以点击，看出她在意什么。</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

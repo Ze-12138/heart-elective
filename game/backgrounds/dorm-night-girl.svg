@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="r" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="2" seed="211" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6e6b0" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#f6e6b0" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#ffe9a8" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#ffe9a8" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lamp">
+      <stop offset="0" stop-color="#f6e6b0" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#f6e6b0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#333a54"/>
+  <rect y="720" width="1600" height="280" fill="#272e44"/>
+  <path d="M0 720 C300 710 620 714 900 706 C1180 698 1400 704 1600 696 L1600 1000 L0 1000 Z" fill="#2b3249"/>
+
+  <g filter="url(#r)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- window and moon -->
+    <g stroke="#e9e2d2" stroke-width="3.6">
+      <rect x="110" y="90" width="420" height="440" rx="8" fill="#1b2540"/>
+      <rect x="132" y="112" width="376" height="396" fill="#202b49"/>
+      <path d="M320 112 V508 M132 310 H508" stroke-width="4.6"/>
+      <circle cx="382" cy="238" r="54" fill="#f6e6b0" stroke-width="3"/>
+      <circle cx="362" cy="222" r="9" fill="#e8d294" stroke="none"/>
+      <circle cx="400" cy="258" r="6" fill="#e8d294" stroke="none"/>
+      <path d="M366 218 q8 10 18 4" fill="none" stroke="#d9c183" stroke-width="2.2"/>
+      <g fill="#f4e7b8" stroke="none">
+        <circle cx="180" cy="160" r="3"/><circle cx="238" cy="210" r="2.2"/>
+        <circle cx="180" cy="260" r="2"/><circle cx="450" cy="160" r="2.6"/>
+        <circle cx="470" cy="240" r="2"/><circle cx="220" cy="360" r="2.4"/>
+        <circle cx="460" cy="420" r="2.2"/><circle cx="280" cy="430" r="2"/>
+        <path d="M250 150 l3 7 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+        <path d="M440 350 l2 5 6 1 -4 3 1 6 -5 -3 -5 3 1 -6 -4 -3 6 -1 Z"/>
+      </g>
+      <path d="M110 90 C98 190 96 410 112 530 L128 530 C120 410 122 190 132 104 Z" fill="#414a66"/>
+      <path d="M530 90 C544 190 544 410 528 530 L512 530 C520 410 518 190 508 104 Z" fill="#414a66"/>
+      <path d="M110 96 C170 84 240 84 300 94 M332 94 C400 82 470 84 530 96" fill="none" stroke="#d9d2c2" stroke-width="2.6" opacity=".7"/>
+    </g>
+
+    <path d="M140 530 L500 530 L880 820 L360 880 Z" fill="url(#beam)" stroke="none"/>
+
+    <!-- fairy lights -->
+    <g fill="none" stroke="#d9d2c2" stroke-width="2.2" opacity=".8">
+      <path d="M560 140 C700 180 840 160 980 200 C1100 234 1220 210 1340 240"/>
+      <g fill="#f6e6b0" stroke="none">
+        <circle cx="610" cy="154" r="5"/><circle cx="680" cy="166" r="5"/>
+        <circle cx="760" cy="166" r="5"/><circle cx="840" cy="172" r="5"/>
+        <circle cx="930" cy="190" r="5"/><circle cx="1020" cy="208" r="5"/>
+        <circle cx="1110" cy="220" r="5"/><circle cx="1200" cy="218" r="5"/>
+      </g>
+    </g>
+
+    <!-- wall poster and clock -->
+    <g stroke="#d9d2c2" stroke-width="2.8" fill="none" opacity=".9">
+      <rect x="930" y="300" width="170" height="170" rx="5" fill="#3d4864"/>
+      <path d="M960 420 q34 -60 68 0 q-34 34 -68 0 Z" fill="#46536d"/>
+      <circle cx="1150" cy="360" r="34" fill="#3d4864"/>
+      <path d="M1150 360 L1150 340 M1150 360 L1164 368"/>
+    </g>
+
+    <!-- bed -->
+    <g stroke="#e9e2d2" stroke-width="3.6">
+      <rect x="846" y="520" width="76" height="420" rx="12" fill="#3d4762"/>
+      <path d="M120 650 L900 632 L928 890 L150 912 Z" fill="#424c66"/>
+      <path d="M120 650 L900 632 L906 692 L126 712 Z" fill="#4b5570"/>
+      <path d="M138 712 L904 692 L920 828 L152 850 Z" fill="#46516c"/>
+      <path d="M150 850 L918 830 L924 890 L154 912 Z" fill="#3d4762"/>
+      <path d="M148 904 L148 956 M902 884 L902 936" fill="none" stroke-width="5"/>
+    </g>
+
+    <!-- pillow -->
+    <g transform="rotate(-3 700 690)">
+      <path d="M552 624 C620 600 780 598 838 626 C856 668 850 726 826 752 C750 772 630 774 560 752 C538 722 538 660 552 624 Z" fill="#e6dfd1" stroke="#e9e2d2" stroke-width="3.4"/>
+      <path d="M576 650 C640 636 754 636 814 652" fill="none" stroke="#c9c1b2" stroke-width="2.4" opacity=".7"/>
+    </g>
+
+    <!-- girl lying: hair spread on pillow -->
+    <g transform="rotate(-2 690 690)">
+      <path d="M586 744 C566 704 578 660 618 638 C650 620 700 618 738 636 C788 660 810 706 796 748 C770 704 750 682 720 672 C744 700 750 734 736 758 C726 726 704 704 680 696 C696 722 698 750 688 770 C672 742 646 728 620 732 C630 754 628 776 618 792 C604 770 592 756 586 744 Z" fill="#e8c07d" stroke="#4a3d35" stroke-width="3.2"/>
+      <path d="M610 660 C640 640 690 636 722 650 M612 700 C640 680 676 672 704 676" fill="none" stroke="#c99a58" stroke-width="2.4" opacity=".6"/>
+      <path d="M636 728 C636 702 656 686 688 686 C720 686 740 702 740 728 C740 756 720 774 688 774 C656 774 636 756 636 728 Z" fill="#f7ddc4" stroke="#4a3d35" stroke-width="3.6"/>
+      <path d="M650 700 C646 676 662 658 688 658 C714 658 730 676 726 700 C718 688 708 680 698 676 C690 688 676 690 664 684 C660 690 655 695 650 700 Z" fill="#e8c07d" stroke="#4a3d35" stroke-width="3"/>
+      <path d="M668 684 q10 8 22 2 M702 676 q6 6 10 10" fill="none" stroke="#c99a58" stroke-width="2.2" opacity=".8"/>
+      <circle cx="670" cy="730" r="4.4" fill="#4a3d35" stroke="none"/>
+      <circle cx="706" cy="730" r="4.4" fill="#4a3d35" stroke="none"/>
+      <path d="M682 748 q6 4 12 0" fill="none" stroke="#b06f63" stroke-width="2.4"/>
+      <g stroke="#ee9f97" stroke-width="2.2" opacity=".65">
+        <path d="M652 742 l6 -4 M656 747 l6 -4 M710 740 l6 4 M706 745 l6 4"/>
+      </g>
+      <path d="M660 772 C672 762 704 762 716 772 L724 806 L654 806 Z" fill="#f3dfe2" stroke="#4a3d35" stroke-width="3.2"/>
+    </g>
+
+    <!-- bow on the pillow -->
+    <g transform="rotate(-14 810 676)" stroke="#4a3d35" stroke-width="2.6">
+      <path d="M810 676 C800 664 788 670 794 680 C788 690 800 696 810 684 Z" fill="#e8a06f"/>
+      <path d="M810 676 C820 664 832 670 826 680 C832 690 820 696 810 684 Z" fill="#e8a06f"/>
+      <circle cx="810" cy="680" r="3.6" fill="#f4c39a"/>
+    </g>
+
+    <!-- blanket -->
+    <path d="M176 792 C182 748 240 712 330 700 C420 688 520 690 596 704 C636 712 662 730 668 758 C672 786 662 816 636 836 C590 862 470 870 356 864 C268 860 200 846 180 826 C168 814 170 802 176 792 Z" fill="#c9a3ae" stroke="#e9e2d2" stroke-width="3.6"/>
+    <path d="M200 778 C264 742 380 718 498 720 C570 722 626 734 654 758" fill="none" stroke="#e0c1c8" stroke-width="9" opacity=".9"/>
+    <path d="M212 748 C310 716 440 702 560 710" fill="none" stroke="#e0c1c8" stroke-width="2.6" opacity=".8"/>
+    <path d="M260 802 C342 782 452 782 532 798" fill="none" stroke="#b48b98" stroke-width="2.4" opacity=".7"/>
+    <path d="M298 834 C382 820 470 822 542 836" fill="none" stroke="#b48b98" stroke-width="2.4" opacity=".65"/>
+    <path d="M248 738 C278 720 326 718 356 736" fill="none" stroke="#b48b98" stroke-width="2.4" opacity=".65"/>
+
+    <!-- raised arm and phone -->
+    <path d="M604 774 C574 770 554 744 548 706 L546 676" fill="none" stroke="#4a3d35" stroke-width="26"/>
+    <path d="M604 774 C574 770 554 744 548 706 L546 676" fill="none" stroke="#f3dfe2" stroke-width="17"/>
+    <path d="M537 690 q11 6 18 0" fill="none" stroke="#4a3d35" stroke-width="3"/>
+    <circle cx="548" cy="660" r="18" fill="#f7ddc4" stroke="#4a3d35" stroke-width="3.2"/>
+    <path d="M536 650 q10 -4 18 4" fill="none" stroke="#4a3d35" stroke-width="2.4"/>
+    <g transform="rotate(-16 560 600)">
+      <rect x="524" y="566" width="70" height="108" rx="10" fill="#fdf8ee" stroke="#4a3d35" stroke-width="3.4"/>
+      <rect x="532" y="576" width="54" height="86" rx="6" fill="#ffe9a8" stroke="none"/>
+      <path d="M560 620 c-5 -7 -16 -3 -14 5 c1 6 14 13 14 13 s13 -7 14 -13 c2 -8 -9 -12 -14 -5 Z" fill="#e88f88" stroke="none"/>
+    </g>
+    <circle cx="560" cy="620" r="150" fill="url(#glow)" stroke="none"/>
+    <path d="M600 700 L660 690 L680 780 L610 790 Z" fill="#ffe9a8" opacity=".08" stroke="none"/>
+
+    <!-- bunny plush at foot of bed -->
+    <g transform="translate(300 706)" stroke="#e9e2d2" stroke-width="2.8">
+      <ellipse cx="42" cy="42" rx="38" ry="28" fill="#e6dfd1"/>
+      <circle cx="42" cy="20" r="22" fill="#e6dfd1"/>
+      <path d="M30 4 C24 -18 34 -24 38 -2 M54 2 C58 -20 68 -14 60 6" fill="#e6dfd1"/>
+      <path d="M34 20 q3 4 6 0 M50 20 q3 4 6 0" fill="none" stroke="#4a3d35" stroke-width="2.2"/>
+      <path d="M42 28 q-4 4 0 6 q4 -2 0 -6 Z" fill="#4a3d35" stroke="none"/>
+    </g>
+
+    <!-- bedside table -->
+    <g stroke="#d9d2c2" stroke-width="3">
+      <path d="M1000 760 L1210 752 L1224 812 L1012 820 Z" fill="#3d4762"/>
+      <path d="M1024 818 L1024 920 M1200 810 L1200 912" fill="none" stroke-width="4.4"/>
+      <path d="M1040 700 L1080 700 L1090 760 L1030 760 Z" fill="#4b5570"/>
+      <path d="M1060 700 L1060 672 M1060 672 C1040 660 1040 636 1060 636 C1080 636 1080 660 1060 672 Z" fill="#4b5570" stroke-width="2.6"/>
+      <ellipse cx="1060" cy="706" rx="86" ry="30" fill="url(#lamp)" stroke="none"/>
+      <path d="M1120 742 C1120 726 1156 726 1158 742 L1152 774 C1150 784 1126 784 1124 774 Z" fill="#4b5570" stroke-width="2.6"/>
+    </g>
+
+    <g fill="none" stroke="#8fa2c4" stroke-width="2.2" opacity=".55">
+      <path d="M760 220 l3 7 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+      <path d="M660 300 q10 -10 20 0 q10 -10 20 0"/>
+      <path d="M380 850 q16 -12 32 0"/>
+      <path d="M1250 520 c-6 -8 -18 -4 -16 5 c1 7 16 15 16 15 s15 -8 16 -15 c2 -9 -10 -13 -16 -5 Z"/>
+    </g>
+  </g>
+</svg>

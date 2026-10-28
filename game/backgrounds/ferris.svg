@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="r" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="2" seed="112" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#303b4e"/>
+  <rect y="620" width="1600" height="380" fill="#3a4557"/>
+  <circle cx="800" cy="420" r="520" fill="#39465b" opacity=".65"/>
+  <g filter="url(#r)" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- stars -->
+    <g fill="#f4e7b8" stroke="none" opacity=".9">
+      <circle cx="180" cy="120" r="3.2"/><circle cx="260" cy="210" r="2.2"/>
+      <circle cx="360" cy="90" r="2.6"/><circle cx="470" cy="170" r="2"/>
+      <circle cx="560" cy="70" r="2.4"/><circle cx="660" cy="150" r="2"/>
+      <circle cx="1030" cy="100" r="2.6"/><circle cx="1140" cy="180" r="2.2"/>
+      <circle cx="1260" cy="80" r="3"/><circle cx="1380" cy="150" r="2.4"/>
+      <circle cx="1470" cy="240" r="2"/><circle cx="930" cy="60" r="2.2"/>
+      <circle cx="120" cy="300" r="2"/><circle cx="1520" cy="100" r="2.6"/>
+      <path d="M300 310 l3 7 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+      <path d="M1320 300 l3 7 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+      <path d="M820 120 l2 5 6 1 -4 3 1 6 -5 -3 -5 3 1 -6 -4 -3 6 -1 Z"/>
+    </g>
+
+    <!-- city skyline -->
+    <g fill="#3d495c" stroke="#d8d2c2" stroke-width="2.6">
+      <path d="M0 640 L0 520 L90 520 L90 560 L170 560 L170 490 L260 490 L260 570 L360 570 L360 450 L450 450 L450 580 L540 580 L540 630 L0 660 Z"/>
+      <path d="M1080 630 L1080 540 L1160 540 L1160 470 L1250 470 L1250 550 L1360 550 L1360 500 L1450 500 L1450 570 L1600 570 L1600 660 Z"/>
+      <path d="M900 620 L900 560 L980 560 L980 610 L1080 610 L1080 640 L900 650 Z"/>
+    </g>
+    <g fill="#f0dfa8" stroke="none" opacity=".85">
+      <rect x="40" y="544" width="12" height="16"/><rect x="66" y="544" width="12" height="16"/>
+      <rect x="196" y="516" width="12" height="16"/><rect x="222" y="516" width="12" height="16"/>
+      <rect x="390" y="486" width="12" height="16"/><rect x="416" y="486" width="12" height="16"/>
+      <rect x="1190" y="500" width="12" height="16"/><rect x="1216" y="500" width="12" height="16"/>
+      <rect x="1390" y="528" width="12" height="16"/><rect x="1416" y="528" width="12" height="16"/>
+      <rect x="920" y="584" width="12" height="16"/><rect x="946" y="584" width="12" height="16"/>
+    </g>
+
+    <!-- ferris wheel -->
+    <g stroke="#efe9da" fill="none">
+      <path d="M820 720 L820 520" stroke-width="6"/>
+      <path d="M980 720 L980 520" stroke-width="6"/>
+      <path d="M800 700 L1000 700" stroke-width="5"/>
+      <circle cx="900" cy="420" r="300" stroke-width="5"/>
+      <circle cx="900" cy="420" r="34" stroke-width="4"/>
+      <circle cx="900" cy="420" r="8" fill="#efe9da" stroke="none"/>
+      <path d="M900 120 L900 96 M900 720 L900 744" stroke="#efe9da" stroke-width="2.2"/>
+    </g>
+
+    <!-- ticket booth -->
+    <g>
+      <path d="M240 720 L440 712 L452 840 L252 850 Z" fill="#465267" stroke="#e7e1d2" stroke-width="3"/>
+      <path d="M226 700 L456 690 L466 730 L236 740 Z" fill="#546075" stroke="#e7e1d2" stroke-width="3"/>
+      <path d="M290 760 L390 756 L396 812 L296 816 Z" fill="#f0dfb0" stroke="#e7e1d2" stroke-width="2.6"/>
+      <path d="M276 740 C300 732 340 730 372 736" fill="none" stroke="#d8cfb9" stroke-width="2.2"/>
+      <path d="M260 850 L260 900 M442 840 L442 890" fill="none" stroke="#e7e1d2" stroke-width="3.2"/>
+    </g>
+
+    <!-- foreground path -->
+    <path d="M0 820 C300 790 500 800 720 780 C1000 754 1300 786 1600 760 L1600 1000 L0 1000 Z" fill="#3c4859"/>
+    <path d="M0 900 C300 866 540 878 780 858 C1060 834 1330 860 1600 834" fill="none" stroke="#5d697b" stroke-width="2.6" stroke-dasharray="16 18"/>
+    <path d="M470 1000 C560 900 690 840 800 820 C910 840 1040 900 1130 1000" fill="#465266" opacity=".8"/>
+
+    <!-- railing -->
+    <g stroke="#d9d2c2" fill="none" stroke-width="3">
+      <path d="M0 760 L1600 730"/>
+      <path d="M40 736 V790 M140 734 V788 M240 732 V786 M340 730 V784 M440 728 V782 M540 726 V780 M640 724 V778 M740 722 V776 M840 720 V774 M940 718 V772 M1040 716 V770 M1140 714 V768 M1240 712 V766 M1340 710 V764 M1440 708 V762 M1540 706 V760"/>
+    </g>
+
+    <!-- little bench -->
+    <g transform="translate(1180 790)">
+      <path d="M0 50 L140 44 L148 66 L8 72 Z" fill="#4a566a" stroke="#d9d2c2" stroke-width="2.8"/>
+      <path d="M10 72 L10 108 M138 66 L138 102" fill="none" stroke="#d9d2c2" stroke-width="3"/>
+      <path d="M6 28 L142 22 M6 42 L144 36" fill="none" stroke="#d9d2c2" stroke-width="2.6"/>
+      <path d="M14 28 L14 72 M136 22 L136 66" fill="none" stroke="#d9d2c2" stroke-width="2.4"/>
+    </g>
+
+    <!-- glow and hearts -->
+    <ellipse cx="900" cy="500" rx="330" ry="220" fill="#f2dfae" opacity=".05"/>
+    <g fill="none" stroke="#d9a9a0" stroke-width="2.2" opacity=".9">
+      <path d="M520 520 c-6 -8 -18 -4 -16 5 c1 7 16 15 16 15 s15 -8 16 -15 c2 -9 -10 -13 -16 -5 Z"/>
+      <path d="M1270 540 c-6 -8 -18 -4 -16 5 c1 7 16 15 16 15 s15 -8 16 -15 c2 -9 -10 -13 -16 -5 Z"/>
+    </g>
+  </g>
+</svg>

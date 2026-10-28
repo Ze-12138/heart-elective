@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="r" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="2" seed="122" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#eef4f1"/>
+  <rect width="1600" height="1000" fill="#e4efef"/>
+  <ellipse cx="800" cy="400" rx="760" ry="430" fill="#dce9ea"/>
+  <g filter="url(#r)" stroke="#4a423b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- tunnel arch -->
+    <g>
+      <path d="M0 720 L0 300 C0 120 260 40 800 40 C1340 40 1600 120 1600 300 L1600 720 Z" fill="#d3e5e7"/>
+      <path d="M80 700 L80 320 C80 170 300 100 800 100 C1300 100 1520 170 1520 320 L1520 700 Z" fill="#cfe4e6" stroke-width="4"/>
+      <path d="M140 700 L140 340 C140 210 340 150 800 150 C1260 150 1460 210 1460 340 L1460 700 Z" fill="#e2f0ef" stroke-width="3.4"/>
+      <g stroke="#8fb9bd" stroke-width="2.4" opacity=".7">
+        <path d="M200 660 L200 366 C200 260 380 200 800 200 C1220 200 1400 260 1400 366 L1400 660"/>
+        <path d="M264 660 L264 400 C264 300 430 250 800 250 C1170 250 1336 300 1336 400 L1336 660"/>
+        <path d="M330 660 L330 430 C330 344 480 296 800 296 C1120 296 1270 344 1270 430 L1270 660"/>
+      </g>
+      <path d="M0 720 L1600 720" stroke-width="4"/>
+    </g>
+
+    <!-- fish school -->
+    <g fill="#f2efe4" stroke-width="3">
+      <g transform="translate(470 330)">
+        <path d="M0 16 C18 -2 50 -2 68 16 C50 34 18 34 0 16 Z"/>
+        <path d="M0 16 L-20 4 L-16 16 L-20 28 Z"/>
+        <circle cx="54" cy="12" r="2.6" fill="#4a423b" stroke="none"/>
+      </g>
+      <g transform="translate(600 260) scale(.8)">
+        <path d="M0 16 C18 -2 50 -2 68 16 C50 34 18 34 0 16 Z"/>
+        <path d="M0 16 L-20 4 L-16 16 L-20 28 Z"/>
+        <circle cx="54" cy="12" r="2.6" fill="#4a423b" stroke="none"/>
+      </g>
+      <g transform="translate(740 370) scale(1.1)">
+        <path d="M0 16 C18 -2 50 -2 68 16 C50 34 18 34 0 16 Z"/>
+        <path d="M0 16 L-20 4 L-16 16 L-20 28 Z"/>
+        <circle cx="54" cy="12" r="2.6" fill="#4a423b" stroke="none"/>
+      </g>
+      <g transform="translate(880 300) scale(.75)">
+        <path d="M0 16 C18 -2 50 -2 68 16 C50 34 18 34 0 16 Z"/>
+        <path d="M0 16 L-20 4 L-16 16 L-20 28 Z"/>
+        <circle cx="54" cy="12" r="2.6" fill="#4a423b" stroke="none"/>
+      </g>
+      <g transform="translate(1040 380) scale(1.05)">
+        <path d="M0 16 C18 -2 50 -2 68 16 C50 34 18 34 0 16 Z"/>
+        <path d="M0 16 L-20 4 L-16 16 L-20 28 Z"/>
+        <circle cx="54" cy="12" r="2.6" fill="#4a423b" stroke="none"/>
+      </g>
+      <g transform="translate(1160 270) scale(.7)">
+        <path d="M0 16 C18 -2 50 -2 68 16 C50 34 18 34 0 16 Z"/>
+        <path d="M0 16 L-20 4 L-16 16 L-20 28 Z"/>
+        <circle cx="54" cy="12" r="2.6" fill="#4a423b" stroke="none"/>
+      </g>
+    </g>
+
+    <!-- big fish silhouette -->
+    <g transform="translate(1140 470) scale(1.4)">
+      <path d="M0 30 C40 -10 120 -10 160 30 C120 70 40 70 0 30 Z" fill="#bddbd9" stroke-width="2.8" opacity=".8"/>
+      <path d="M0 30 L-36 10 L-28 30 L-36 50 Z" fill="#bddbd9" stroke-width="2.8" opacity=".8"/>
+      <circle cx="134" cy="24" r="2.6" fill="#4a423b" stroke="none"/>
+      <path d="M60 14 C72 34 72 30 60 46" fill="none" stroke="#93bcba" stroke-width="2" opacity=".8"/>
+    </g>
+
+    <!-- jellyfish -->
+    <g stroke="#c9a9b6" fill="#f3e1e7" stroke-width="2.6" opacity=".9">
+      <g transform="translate(300 470)">
+        <path d="M0 20 C0 -8 44 -8 44 20 C36 14 28 26 22 18 C16 26 8 14 0 20 Z"/>
+        <path d="M10 22 C8 38 14 46 8 58 M22 24 C22 40 28 48 22 62 M34 22 C34 36 40 46 34 58" fill="none"/>
+      </g>
+      <g transform="translate(380 390) scale(.7)">
+        <path d="M0 20 C0 -8 44 -8 44 20 C36 14 28 26 22 18 C16 26 8 14 0 20 Z"/>
+        <path d="M10 22 C8 38 14 46 8 58 M22 24 C22 40 28 48 22 62 M34 22 C34 36 40 46 34 58" fill="none"/>
+      </g>
+    </g>
+
+    <!-- bubbles -->
+    <g fill="none" stroke="#9ec4c7" stroke-width="2.2" opacity=".8">
+      <circle cx="560" cy="230" r="7"/><circle cx="540" cy="190" r="4"/>
+      <circle cx="810" cy="230" r="5"/><circle cx="830" cy="180" r="3"/>
+      <circle cx="980" cy="240" r="6"/><circle cx="1000" cy="196" r="3.4"/>
+      <circle cx="1280" cy="320" r="5"/><circle cx="1260" cy="270" r="3"/>
+      <circle cx="340" cy="330" r="4"/><circle cx="360" cy="290" r="2.6"/>
+    </g>
+
+    <!-- ground / reflection -->
+    <path d="M0 720 C300 700 560 712 800 700 C1080 686 1340 702 1600 684 L1600 1000 L0 1000 Z" fill="#e8e5d9"/>
+    <path d="M0 780 C300 758 560 772 800 758 C1080 742 1340 760 1600 740 L1600 800 C1340 820 1080 802 800 818 C560 832 300 818 0 840 Z" fill="#dbe4e2" opacity=".8"/>
+    <g fill="none" stroke="#c6d5d3" stroke-width="2.2" opacity=".8">
+      <path d="M220 850 C300 840 380 842 450 850 M600 870 C680 860 760 862 830 870 M1040 852 C1120 842 1200 844 1270 852"/>
+      <path d="M460 930 q16 -12 32 0 M1060 940 q16 -12 32 0"/>
+    </g>
+
+    <!-- bench -->
+    <g transform="translate(680 790)">
+      <path d="M0 70 L240 60 L256 88 L10 98 Z" fill="#dfe8e4" stroke-width="3.4"/>
+      <path d="M8 36 L244 24 M10 54 L246 42" fill="none" stroke-width="3.4"/>
+      <path d="M16 98 L16 154 M238 86 L238 142" fill="none" stroke-width="4.4"/>
+      <path d="M22 36 L22 98 M232 24 L232 86" fill="none" stroke-width="3.4"/>
+    </g>
+
+    <!-- light rays -->
+    <g fill="none" stroke="#f6f3e7" stroke-width="3" opacity=".55">
+      <path d="M520 150 L440 640 M640 120 L600 640 M960 120 L1000 640 M1080 150 L1160 640"/>
+    </g>
+
+    <!-- doodles -->
+    <g fill="none" stroke="#d6a89b" stroke-width="2.2" opacity=".8">
+      <path d="M700 560 c-6 -8 -18 -4 -16 5 c1 7 16 15 16 15 s15 -8 16 -15 c2 -9 -10 -13 -16 -5 Z"/>
+      <path d="M900 540 l3 7 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+    </g>
+  </g>
+</svg>

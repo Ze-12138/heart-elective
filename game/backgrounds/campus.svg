@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="r" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="2" seed="22" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#fbf7ef"/>
+  <path d="M0 600 C260 560 520 596 800 570 C1080 544 1340 574 1600 548 L1600 1000 L0 1000 Z" fill="#f1eadb"/>
+  <path d="M0 660 C300 622 520 654 800 628 C1080 602 1340 630 1600 606 L1600 720 L0 780 Z" fill="#e7ddca" opacity=".7"/>
+  <g filter="url(#r)" stroke="#4a423b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- clouds -->
+    <g fill="none" stroke="#b9c8cd" stroke-width="2.6" opacity=".9">
+      <path d="M180 160 q30 -34 68 -18 q24 -34 62 -12 q34 -8 44 22 q-30 12 -70 8 q-44 8 -104 0 Z"/>
+      <path d="M1120 120 q26 -30 58 -14 q22 -30 54 -10 q32 -6 38 20 q-28 10 -62 6 q-40 8 -88 -2 Z"/>
+      <path d="M1420 220 q20 -22 44 -10 q18 -22 42 -6 q24 -4 28 16 q-24 8 -50 4 q-30 6 -64 -4 Z"/>
+    </g>
+    <g fill="none" stroke="#9bafa8" stroke-width="2.4">
+      <path d="M300 230 q8 -8 16 0 q8 8 16 0 M350 206 q6 -6 12 0 q6 6 12 0"/>
+      <path d="M1240 250 q8 -8 16 0 q8 8 16 0 M1290 226 q6 -6 12 0 q6 6 12 0"/>
+    </g>
+
+    <!-- main teaching building -->
+    <g>
+      <path d="M430 260 L980 236 L998 574 L448 592 Z" fill="#f7eedd"/>
+      <path d="M410 246 L1000 222 L1016 262 L426 286 Z" fill="#e8d9bf"/>
+      <path d="M700 262 L758 258 L762 574 L706 576 Z" fill="#f3e5d0"/>
+      <g fill="#d6e5ec" stroke-width="2.8">
+        <rect x="480" y="318" width="74" height="66"/>
+        <rect x="584" y="312" width="74" height="66"/>
+        <rect x="820" y="302" width="74" height="66"/>
+        <rect x="900" y="298" width="74" height="66"/>
+        <rect x="480" y="424" width="74" height="66"/>
+        <rect x="584" y="418" width="74" height="66"/>
+        <rect x="820" y="408" width="74" height="66"/>
+        <rect x="900" y="404" width="74" height="66"/>
+      </g>
+      <path d="M700 574 L700 478 C700 448 760 448 760 478 L760 574" fill="#d9e4e6"/>
+      <path d="M704 574 V500 M756 574 V500" fill="none" stroke-width="2.4"/>
+      <path d="M520 246 L520 208 L560 202 L560 238" fill="#efe0c8"/>
+      <path d="M470 300 C504 290 528 290 556 298" fill="none" stroke="#dbc9ab" stroke-width="2.4"/>
+      <path d="M430 260 L430 240 L980 216 L980 236" fill="none" stroke-width="3"/>
+      <circle cx="500" cy="360" r="3" fill="#4a423b" stroke="none"/>
+      <path d="M836 330 h40 M836 338 h28" fill="none" stroke="#b9cdd5" stroke-width="2.2"/>
+    </g>
+
+    <!-- clock tower doodle -->
+    <g transform="translate(330 300)">
+      <path d="M0 210 L18 210 L18 40 L0 40 Z" fill="#efe2cd"/>
+      <path d="M-24 42 L42 42 L42 6 L-24 6 Z" fill="#f7eedd"/>
+      <path d="M-18 6 L36 6 L28 -20 L-8 -20 Z" fill="#e8d9bf"/>
+      <circle cx="9" cy="24" r="12" fill="#fdf9f0" stroke-width="2.8"/>
+      <path d="M9 17 V24 L15 28" stroke-width="2.2"/>
+      <path d="M-6 78 L24 78 M-6 92 L24 92" stroke-width="2.4" opacity=".75"/>
+    </g>
+
+    <!-- trees -->
+    <g>
+      <path d="M180 600 C176 528 178 448 190 386" fill="none" stroke-width="8"/>
+      <path d="M190 470 C160 442 140 412 134 380 M188 430 C220 398 244 368 254 336" fill="none" stroke-width="5"/>
+      <g fill="#dbe7d7" stroke-width="3">
+        <path d="M186 388 C138 380 112 344 118 306 C74 288 82 232 124 218 C128 174 186 158 216 190 C260 168 306 196 302 236 C344 250 338 302 300 318 C302 356 262 386 222 378 C206 392 192 394 186 388 Z"/>
+      </g>
+      <path d="M140 300 C168 286 188 266 198 240 M226 360 C250 344 268 318 274 292" fill="none" stroke="#a9bfa6" stroke-width="2.4" opacity=".7"/>
+      <path d="M230 600 C228 544 230 490 238 446" fill="none" stroke-width="7"/>
+      <path d="M238 500 C266 470 284 446 292 416" fill="none" stroke-width="4.6"/>
+      <g fill="#dbe7d7" stroke-width="3">
+        <path d="M236 448 C200 442 182 416 190 388 C156 372 166 330 198 322 C206 288 250 282 272 306 C304 292 334 316 326 344 C356 358 344 396 314 404 C308 432 276 452 250 442 C244 450 238 452 236 448 Z"/>
+      </g>
+      <path d="M1210 606 C1208 542 1212 472 1224 416" fill="none" stroke-width="8"/>
+      <path d="M1220 488 C1188 460 1170 430 1166 398 M1222 452 C1252 422 1272 390 1278 360" fill="none" stroke-width="5"/>
+      <g fill="#dbe7d7" stroke-width="3">
+        <path d="M1222 414 C1180 408 1158 376 1168 344 C1132 328 1142 286 1178 280 C1184 246 1230 238 1254 264 C1290 248 1326 272 1318 304 C1350 316 1342 356 1308 364 C1304 394 1272 414 1244 402 C1238 414 1228 418 1222 414 Z"/>
+      </g>
+      <path d="M398 606 C396 566 398 536 404 512" fill="none" stroke-width="6"/>
+      <g fill="#e2ead9" stroke-width="2.8">
+        <path d="M402 512 C378 508 364 490 370 470 C346 460 352 432 376 428 C382 404 414 400 430 418 C454 410 474 428 466 448 C488 458 478 486 454 490 C450 510 426 522 408 512 Z"/>
+      </g>
+      <path d="M1110 608 C1108 574 1110 548 1116 528" fill="none" stroke-width="5.5"/>
+      <g fill="#e2ead9" stroke-width="2.8">
+        <path d="M1114 528 C1094 524 1082 508 1088 490 C1068 482 1074 458 1094 454 C1098 434 1124 430 1138 446 C1158 438 1176 454 1168 472 C1186 480 1178 504 1158 508 C1154 524 1134 534 1118 526 Z"/>
+      </g>
+    </g>
+
+    <!-- bike -->
+    <g transform="translate(690 700)">
+      <circle cx="0" cy="56" r="44" fill="none" stroke-width="4"/>
+      <circle cx="168" cy="56" r="44" fill="none" stroke-width="4"/>
+      <circle cx="0" cy="56" r="3" fill="#4a423b"/>
+      <circle cx="168" cy="56" r="3" fill="#4a423b"/>
+      <path d="M0 56 L46 56 L76 8 L112 56 L168 56 M76 8 L84 8 M52 10 C66 2 80 2 92 8" fill="none" stroke-width="4"/>
+      <path d="M38 34 L60 56 M100 56 L122 20" fill="none" stroke-width="3"/>
+      <path d="M112 14 L134 14" fill="none" stroke-width="3"/>
+      <path d="M64 58 L92 58" fill="none" stroke="#8b7a63" stroke-width="2.4"/>
+    </g>
+
+    <!-- path and bench -->
+    <path d="M0 812 C300 770 560 806 800 780 C1080 750 1330 786 1600 760 L1600 900 C1300 940 1080 910 800 936 C520 962 280 930 0 964 Z" fill="#efe4d0"/>
+    <path d="M180 860 C340 842 470 844 610 856 M980 872 C1140 858 1280 858 1430 872" fill="none" stroke="#d8c8ad" stroke-width="2.6" opacity=".8"/>
+    <g transform="translate(1080 730)">
+      <path d="M0 60 L150 56 L156 74 L4 78 Z" fill="#f0e1c9" stroke-width="3.2"/>
+      <path d="M10 78 L10 122 M142 74 L142 118" fill="none" stroke-width="4"/>
+      <path d="M6 40 L152 36 M6 54 L152 50" fill="none" stroke-width="3"/>
+      <path d="M16 40 L16 122 M140 36 L140 118" fill="none" stroke-width="3.4"/>
+    </g>
+
+    <!-- falling leaves -->
+    <g fill="none" stroke="#c8a878" stroke-width="2.2">
+      <path d="M860 250 q10 -10 20 0 q-10 12 -20 0 Z"/>
+      <path d="M940 330 q9 -9 18 0 q-9 11 -18 0 Z"/>
+      <path d="M760 380 q8 -8 16 0 q-8 10 -16 0 Z"/>
+      <path d="M1180 420 q8 -8 16 0 q-8 10 -16 0 Z"/>
+      <path d="M560 350 q7 -7 14 0 q-7 9 -14 0 Z"/>
+    </g>
+
+    <!-- tiny doodle hearts and stars -->
+    <g fill="none" stroke="#d79a91" stroke-width="2.2" opacity=".75">
+      <path d="M1040 210 c-6 -8 -18 -3 -16 6 c1 7 16 15 16 15 s15 -8 16 -15 c2 -9 -10 -14 -16 -6 Z"/>
+      <path d="M660 180 l3 7 8 1 -6 5 2 8 -7 -4 -7 4 2 -8 -6 -5 8 -1 Z"/>
+    </g>
+  </g>
+</svg>
