@@ -1,6 +1,11 @@
 # 心动选修课
 
+[![Deploy](https://github.com/ZE875/heart-elective/actions/workflows/pages.yml/badge.svg)](https://github.com/ZE875/heart-elective/actions/workflows/pages.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 一个校园恋爱向的 H5 文字游戏：手绘漫画风场景、双模式对话（对白 / 聊天）、好感度与细节线索、可拖动窗帘、可对弈的五子棋小游戏。
+
+**在线试玩**：https://ze875.github.io/heart-elective/
 
 ---
 
