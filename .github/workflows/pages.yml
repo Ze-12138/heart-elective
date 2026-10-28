@@ -25,13 +25,9 @@ jobs:
       - name: Build site (static, no bundler)
         run: |
           mkdir -p _site
-          cp -r game/* _site/
-          # 根路径重定向到游戏
-          cat > _site/index.html <<'EOF'
-          <!doctype html><meta charset="utf-8">
-          <meta http-equiv="refresh" content="0; url=./index.html">
-          <title>心动选修课</title>
-          EOF
+          # game/index.html 就是站点首页，直接平铺到根目录
+          cp -r game/. _site/
+          ls -la _site | head -20
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
